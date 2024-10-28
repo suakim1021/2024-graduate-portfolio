@@ -1,0 +1,525 @@
+/*set colours*/
+:root{
+    --primary-color:#7611fa;
+    --secondary-color:#cea8ff;
+    --color-green:#40FF10;
+    --color-lightgray: #F5F5F5;
+    --color-black: #1D1D1D;
+    --color-drakgray: #3F3F3F;
+}
+
+@font-face {
+    font-family: EngFont;
+    src: url(font/LexendZetta-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: KorFont;
+    src: url(font/NotoSansKR-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: var(--color-lightgray);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* :::::: 내비게이션 스타일 설정 :::::: */
+/*The outer container components*/
+.container{
+    position: fixed;
+    left: 0;
+    top: 22px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 99;
+}
+
+.tabs{
+    width: 630px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid black;
+    padding:0.75rem;
+    border-radius:99px;
+}
+
+.tabs *{
+    z-index: 99;
+}
+/*Remove the default radio button option*/
+input[type="radio"]{
+    display: none;
+}
+
+/*Style the tabs*/
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:54px;
+    width:150px;
+    border-radius: 99px;
+    cursor:pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[type="radio"]:checked + label > .notification{
+    background-color: var(--primary-color);
+    color:#fff;
+}
+
+/*Enable the sliding effect*/
+input[id="radio1"]:checked ~ .slide{
+    transform: translateX(0);
+}
+
+input[id="radio2"]:checked ~ .slide{
+    transform: translateX(100%);
+}
+
+input[id="radio3"]:checked ~ .slide{
+    transform: translateX(200%);
+}
+
+input[id="radio4"]:checked ~ .slide{
+    transform: translateX(300%);
+} 
+
+.tabs label {
+    font-family: EngFont;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.slide{
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width:150px;
+    background-color: var(--color-green);
+    border: 1px solid black;
+    z-index:1;
+    border-radius:99px;
+    transition: 0.25s ease-out;
+}
+
+@media (max-width:700px){
+    .tabs{
+        transform:scale(0.6);
+    }
+}
+
+
+/* :::::: 히어로 섹션 스타일 설정 :::::: */
+#main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#main .title {
+    padding-left: 140px;
+    padding-top: 310px;
+}
+#main .title h3 {
+    font-family: EngFont;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    letter-spacing: 8px;
+    color: var(--color-black);
+}
+#main .title h1 {
+    font-family: KorFont;
+    font-size: 108px;
+    margin-left: -10px;
+    font-weight: 900;
+    line-height: 134px;
+    letter-spacing: -3px;
+    color: var(--color-black);
+}
+#main .object {
+    padding-top: 80px;
+
+}
+#main .object img {
+}
+
+/* :::::: 세가지소개 스타일 설정 :::::: */
+#intro {
+    width: 100%;
+    padding-top: 400px;
+    padding-bottom: 296px;
+}
+#intro .content_wrap {
+    padding: 0px 293px;
+}
+#intro .content_wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+#intro .content_wrap ul li {
+    width: 370px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+#intro .content_wrap ul li .object {
+    position: relative;
+    width: auto;
+    height: 270px;
+    margin-bottom: 60px;
+    padding-left: 70px;
+}
+#intro .content_wrap ul li .object img {
+    position: absolute;
+    bottom: 0;
+}
+#intro .content_wrap ul li .text .desc {
+    float: left;
+}
+#intro .content_wrap ul li .text .desc h2 {
+    font-family: KorFont;
+    font-size: 64px;
+    line-height: 85px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    transition: .3s;
+}
+#intro .content_wrap ul li .text .number {
+    float: left;
+    margin-right: 27px;
+    margin-top: 17px;
+    font-family: EngFont;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-black);
+    text-align: center;
+}
+#intro .content_wrap ul li .text .number h2 {
+    line-height: 43px;
+}
+/*마우스오버 형광펜 밑줄 효과*/
+#intro .content_wrap ul li .text .desc h2 span {
+    position: relative;
+    color: var(--color-black);
+}
+#intro .content_wrap ul li .text .desc h2 span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: var(--color-green);
+    transition: width .3s;
+    mix-blend-mode: multiply;
+}
+#intro .content_wrap ul li .text .desc h2:hover {
+    color: lightgray;
+}
+#intro .content_wrap ul li .text .desc h2:hover span::after {
+    width: 100%;   
+}
+/*--------------------------*/
+
+
+/*무한 스크롤링 배너*/
+#banner {
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    background-color: var(--color-lightgray);
+    user-select: none;
+}
+#banner .wrap-box {
+    display: flex;
+    width: 120%;
+    padding: 10px 0;
+    background-color: var(--color-black);
+    overflow: hidden;
+    transform: translateX(-160px) translateY(150px) rotate(-8deg);
+}
+#banner .wrap-box .rolling-list {
+    display: flex;
+    flex-shrink: 0;
+}
+#banner .wrap-box .rolling-list .list {
+    font-family: EngFont;
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--color-lightgray);
+    letter-spacing: -3px;
+    
+}
+@keyframes rolling1 {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
+}
+@keyframes rolling2 {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-200%); }
+}
+
+.rolling-list.original {
+	animation: rolling1 30s linear infinite;
+}
+.rolling-list.clone {
+	animation: rolling2 30s linear infinite;
+}
+
+
+/* :::::: 프로필 소개 설정 :::::: */
+#about {
+    width: 100%;
+}
+#about .profile {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+#about .profile .title {
+    padding-top: 200px;
+}
+#about .profile .title h2 {
+    font-family: KorFont;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 78px;
+    color: var(--color-black);
+    text-align: center;
+    margin-bottom: 28px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/*마우스오버 형광펜 밑줄 효과*/
+#about .profile .title span {
+    position: relative;
+    color: var(--color-black);
+}
+#about .profile .title h2 span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: var(--color-green);
+    transition: width .3s;
+    mix-blend-mode: multiply;
+}
+#about .profile .title h2:hover {
+    color: lightgray;
+}
+#about .profile .title h2:hover span::after {
+    width: 100%;   
+}
+/*--------------------------*/
+
+#about .profile .title p {
+    font-family: KorFont;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 160%;
+    color: var(--color-black);
+    text-align: center;
+}
+
+/*id카드 스타일 설정*/
+#about .profile .idcard {
+    rotate: -8deg;
+
+    padding: 35px 30px;
+    font-family: EngFont;
+    width: 606px;
+    height: 342px;
+    border-radius: 10px;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-green);
+    box-shadow: 10px 20px;
+
+    transition: .3s;
+    cursor: pointer;
+
+    position: absolute;
+    left: 180px;
+    top: 750px;
+}
+#about .profile .idcard:hover {
+    /*마우스오버 시 기울기+뎁스 변화*/
+    rotate: 0deg;
+    scale: 1.05;
+    z-index: 50;
+    /* box-shadow: 5px 5px; */
+}
+#about .profile .idcard .profimg {
+    float: left;
+}
+#about .profile .idcard .profimg img {
+    border: 1px solid var(--color-black);
+}
+#about .profile .idcard .desc {
+    padding-left: 30px;
+    float: left;
+}
+#about .profile .idcard .desc h5 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 150%;
+    letter-spacing: -3px;
+}
+#about .profile .idcard .desc .name p {
+    font-size: 20px;
+    letter-spacing: -3px;
+}
+#about .profile .idcard .desc .dash {
+    width: 115%;
+    height: 1px;
+    margin: 20px 0;
+    border-bottom: 1px dashed var(--color-black);
+}
+
+#about .profile .idcard .barcode {
+    float: right;
+    margin: 30px 0;
+}
+
+/*이력서 스타일 설정*/
+#about .profile .memo {
+    font-family: EngFont;
+    width: 437px;
+    height: 662px;
+    border: 1px solid var(--color-black);
+    background-color: #fff;
+    box-shadow: 10px 20px;
+    overflow: hidden;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#about .profile .second {
+    height: 700px;
+}
+#about .profile .memo.first:hover,
+#about .profile .memo.second:hover {
+    /*마우스오버 시 기울기+뎁스 변화*/
+    rotate: 0deg;
+    scale: 1.05;
+    /* box-shadow: 5px 5px; */
+    z-index: 50;
+}
+#about .profile .ico {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 80px;
+}
+#about .profile .memo h2 {
+    display: inline;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-left: 10px;
+    position: relative;
+}
+#about .profile .memo h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: var(--color-green);
+    mix-blend-mode: multiply;
+}
+#about .profile h3 {
+    font-family: KorFont;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+#about .profile table {
+    width: 120%;
+    margin-left: -10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-black);
+    border-collapse: collapse;
+}
+#about .profile table .date {
+    width: 120px;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    padding-left: 20px;
+}
+#about .profile table .kor {
+    font-family: KorFont;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    padding-left: 10px;
+}
+#about .profile table .blank {
+    color: transparent;
+}
+#about .profile table td {
+    padding: 7px 0px;
+    border: 1px solid var(--color-black);
+}
+
+/*마우스오버 형광펜 밑줄 효과*/
+#about .profile table .kor span {
+    position: relative;
+    color: var(--color-black);
+}
+#about .profile table .kor span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: var(--color-green);
+    transition: width .3s;
+    mix-blend-mode: multiply;
+}
+#about .profile table .kor:hover span::after {
+    width: 100%;   
+}
+/*--------------------------*/
+
+#about .profile .memo.first {
+    rotate: 4.88deg;
+
+    position: absolute;
+    left: 767px;
+    top: 600px;
+}
+#about .profile .memo.second {
+    rotate: -7deg;
+
+    position: absolute;
+    right: 180px;
+    top: 700px;
+}
