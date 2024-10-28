@@ -87,15 +87,12 @@ input[type="radio"]:checked + label > .notification{
 input[id="radio1"]:checked ~ .slide{
     transform: translateX(0);
 }
-
 input[id="radio2"]:checked ~ .slide{
     transform: translateX(100%);
 }
-
 input[id="radio3"]:checked ~ .slide{
     transform: translateX(200%);
 }
-
 input[id="radio4"]:checked ~ .slide{
     transform: translateX(300%);
 } 
@@ -105,7 +102,6 @@ input[id="radio4"]:checked ~ .slide{
     font-size: 16px;
     font-weight: 400;
 }
-
 .slide{
     position: absolute;
     display: flex;
@@ -117,7 +113,6 @@ input[id="radio4"]:checked ~ .slide{
     border-radius:99px;
     transition: 0.25s ease-out;
 }
-
 @media (max-width:700px){
     .tabs{
         transform:scale(0.6);
@@ -241,7 +236,7 @@ input[id="radio4"]:checked ~ .slide{
 /*무한 스크롤링 배너*/
 #banner {
     width: 100%;
-    height: 370px;
+    height: 390px;
     overflow: hidden;
     background-color: var(--color-lightgray);
     user-select: none;
@@ -295,7 +290,7 @@ input[id="radio4"]:checked ~ .slide{
     position: relative;
 }
 #about .profile .title {
-    padding-top: 200px;
+    padding-top:170px;
 }
 #about .profile .title h2 {
     font-family: KorFont;
@@ -356,14 +351,14 @@ input[id="radio4"]:checked ~ .slide{
     border-radius: 10px;
     border: 1px solid var(--color-black);
     background-color: var(--color-green);
-    box-shadow: 10px 20px;
+    box-shadow: 10px 20px var(--color-black);
 
     transition: .3s;
     cursor: pointer;
 
     position: absolute;
     left: 180px;
-    top: 750px;
+    top: 650px;
 }
 #about .profile .idcard:hover {
     /*마우스오버 시 기울기+뎁스 변화*/
@@ -411,7 +406,7 @@ input[id="radio4"]:checked ~ .slide{
     height: 662px;
     border: 1px solid var(--color-black);
     background-color: #fff;
-    box-shadow: 10px 20px;
+    box-shadow: 10px 20px var(--color-black);
     overflow: hidden;
 
     transition: .3s;
@@ -514,12 +509,100 @@ input[id="radio4"]:checked ~ .slide{
 
     position: absolute;
     left: 767px;
-    top: 600px;
+    top: 530px;
 }
 #about .profile .memo.second {
     rotate: -7deg;
 
     position: absolute;
     right: 180px;
-    top: 700px;
+    top: 600px;
+}
+
+/* :::::: works 항목 스타일 :::::: */
+#works {
+    width: 100%;
+}
+#works .content_wrap .title {
+    margin-left: 140px;
+}
+#works .content_wrap .title h2 {
+    font-family: EngFont;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -10px;
+    color: var(--color-black);
+    margin-bottom: -5px;
+}
+#works .content_wrap .title p {
+    font-family: KorFont;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: gray;
+    margin-left: 10px;
+}
+
+
+/* :::::: 컨택트 섹션 스타일 :::::: */
+#contact {
+    width: 100%;
+    height: 1000px;
+}
+#contact .content_wrap {
+    position: relative;
+}
+#contact .content_wrap .title {
+}
+#contact .content_wrap .title h2 {
+    font-family: EngFont;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -10px;
+    color: var(--color-black);
+    margin-bottom: 40px;
+    text-align: center;
+}
+#contact .content_wrap .mail {
+    transition: .3s;
+
+    width: 803px;
+    height: 475px;
+    border-radius: 10px;
+    border: 1px solid var(--color-black);
+    background-color: #fff;
+    box-shadow: 15px 30px var(--color-black);
+    margin: auto;
+    padding: 50px 30px;
+}
+#contact .content_wrap .mail:hover {
+    transform: translateX(20px) translateY(30px);
+    box-shadow: 2px 2px var(--color-black);
+}
+#contact .content_wrap .mail h3 {
+    font-family: EngFont;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    color: var(--color-black);
+}
+
+
+/* :::::: 푸터 :::::: */
+#footer {
+    width: 100%;
+    height: 212px;
+    background-color: var(--color-black);
+    padding-left: 140px;
+    padding-top: 60px;
+}
+#footer .txt_wrap p, #footer .txt_wrap ul li {
+    font-family: KorFont;
+    font-size: 15px;
+    font-weight: 300;
+    color: gray;
+    margin-bottom: 10px;
+}
+#footer .txt_wrap ul li span {
+    margin-right: 20px;
 }
