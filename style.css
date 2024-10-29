@@ -25,6 +25,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--color-black);
+}
+
+.all_wrap {
+    width: 1900px;
+    overflow: hidden;
+    margin: auto;
+}
+
 section {
     background-color: var(--color-lightgray);
 }
@@ -61,12 +71,10 @@ a {
 .tabs *{
     z-index: 99;
 }
-/*Remove the default radio button option*/
-input[type="radio"]{
-    display: none;
-}
+/*라디오 버튼 옵션 제거*/
+input[type="radio"]{display: none;}
 
-/*Style the tabs*/
+/*내비게이션 탭 스타일s*/
 .tab{
     display: flex;
     align-items: center;
@@ -83,7 +91,7 @@ input[type="radio"]:checked + label > .notification{
     color:#fff;
 }
 
-/*Enable the sliding effect*/
+/*슬라이드 애니메이션 효과*/
 input[id="radio1"]:checked ~ .slide{
     transform: translateX(0);
 }
@@ -122,9 +130,11 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 히어로 섹션 스타일 설정 :::::: */
 #main {
-    width: 100%;
+    width: 1920px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 #main .title {
     padding-left: 140px;
@@ -145,18 +155,45 @@ input[id="radio4"]:checked ~ .slide{
     font-weight: 900;
     line-height: 134px;
     letter-spacing: -3px;
-    color: var(--color-black);
+    color: lightgray;
+
+    transition: .3s;
+    cursor: pointer;
 }
 #main .object {
     padding-top: 80px;
+}
 
+/*마우스오버 형광펜 밑줄 효과*/
+#main .title span {
+    position: relative;
+    color: var(--color-black);
 }
-#main .object img {
+#main .title h1 span::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 95px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: var(--color-green);
+    transition: width .3s;
+    mix-blend-mode: multiply;
 }
+#main .title h1:hover {
+    color: var(--color-black);
+}
+#main .title h1:hover span::after {
+    width: 100%;   
+}
+/*--------------------------*/
+
 
 /* :::::: 세가지소개 스타일 설정 :::::: */
 #intro {
-    width: 100%;
+    width: 1920px;
+    margin: 0 auto;
     padding-top: 400px;
     padding-bottom: 296px;
 }
@@ -179,10 +216,123 @@ input[id="radio4"]:checked ~ .slide{
     margin-bottom: 60px;
     padding-left: 70px;
 }
+
+/*이미지 기본 위치 설정*/
 #intro .content_wrap ul li .object img {
     position: absolute;
     bottom: 0;
 }
+
+/*전구 이미지 조립*/
+#intro .content_wrap ul li .object.bulb img:nth-child(2) {
+    position: absolute;
+    bottom: 125px;
+    left: 95px;
+
+    animation: ani_bulb 1.5s infinite alternate;
+}
+/*마우스오버시 애니메이션 일시정지*/
+/* #intro .content_wrap ul li:hover .object.bulb img:nth-child(2),
+#intro .content_wrap ul li:hover .object.battery .group,
+#intro .content_wrap ul li:hover .object.battery .group img:nth-child(1),
+#intro .content_wrap ul li:hover .object.battery .group img:nth-child(2),
+#intro .content_wrap ul li:hover .object.battery .group img:nth-child(3),
+#intro .content_wrap ul li:hover .object.phone img:nth-child(2),
+#intro .content_wrap ul li:hover .object.phone img:nth-child(3),
+#intro .content_wrap ul li:hover .object.phone img:nth-child(4) {
+    animation-play-state: paused;
+} */
+
+/*배터리 이미지 조립*/
+#intro .content_wrap ul li .object.battery .group {
+    animation: ani_battery 2s infinite alternate;
+}
+#intro .content_wrap ul li .object.battery .group img:nth-child(1) {
+    position: absolute;
+    bottom: 175px;
+    left: 65px;
+    z-index: 4;
+
+    animation: ani_battery1 2s infinite alternate;
+}
+#intro .content_wrap ul li .object.battery .group img:nth-child(2) {
+    position: absolute;
+    bottom: 190px;
+    left: 95px;
+    z-index: 3;
+
+    animation: ani_battery2 2s infinite alternate;
+}
+#intro .content_wrap ul li .object.battery .group img:nth-child(3) {
+    position: absolute;
+    bottom: 180px;
+    left: 95px;
+    z-index: 2;
+
+    animation: ani_battery3 2s infinite alternate;
+}
+
+/*핸드폰 이미지 조립*/
+#intro .content_wrap ul li .object.phone img:nth-child(2) {
+    position: absolute;
+    bottom: -10px;
+    left: 110px;
+    z-index: 2;
+
+    animation: ani_phone1 3s infinite alternate;
+}
+#intro .content_wrap ul li .object.phone img:nth-child(3) {
+    position: absolute;
+    bottom: 40px;
+    left: 250px;
+    z-index: 3;
+
+    animation: ani_phone2 2s infinite alternate;
+}
+#intro .content_wrap ul li .object.phone img:nth-child(4) {
+    position: absolute;
+    bottom: 35px;
+    left: 160px;
+    z-index: 4;
+
+    animation: ani_phone3 2s infinite alternate;
+}
+
+/*애니메이션 설정*/
+@keyframes ani_bulb {
+    0% {bottom: 125px;left: 95px;}
+    100% {bottom: 170px;left: 95px;}
+}
+@keyframes ani_battery {
+    0% {transform: translateX(-80px) translateY(250px);}
+    100% {transform: translateX(-80px) translateY(340px);}
+}
+@keyframes ani_battery1 {
+    0% {bottom: 165px;left: 55px;}
+    100% {bottom: 197px;left: 95px;}
+}
+@keyframes ani_battery2 {
+    0% {bottom: 180px;left: 80px;}
+    100% {bottom: 195px;left: 100px;}
+}
+@keyframes ani_battery3 {
+    0% {bottom: 185px;left: 95px;}
+    100% {bottom: 177px;left: 88px;}
+}
+@keyframes ani_phone1 {
+    0% {bottom: 0px;left: 85px;}
+    100% {bottom: -10px;left: 110px;}
+}
+@keyframes ani_phone2 {
+    0% {bottom: 70px;left: 250px;}
+    100% {bottom: 40px;left: 250px;}
+}
+@keyframes ani_phone3 {
+    0% {bottom: -10px;left: 160px;}
+    100% {bottom: 65px;left: 160px;}
+}
+
+/*텍스트 스타일 + 네모칸 숫자 설정*/
 #intro .content_wrap ul li .text .desc {
     float: left;
 }
@@ -193,6 +343,7 @@ input[id="radio4"]:checked ~ .slide{
     font-weight: 900;
     letter-spacing: -3px;
     transition: .3s;
+    color: lightgray;
 }
 #intro .content_wrap ul li .text .number {
     float: left;
@@ -202,11 +353,13 @@ input[id="radio4"]:checked ~ .slide{
     width: 44px;
     height: 44px;
     border: 1px solid var(--color-black);
+    background-color: #fff;
     text-align: center;
 }
 #intro .content_wrap ul li .text .number h2 {
     line-height: 43px;
 }
+
 /*마우스오버 형광펜 밑줄 효과*/
 #intro .content_wrap ul li .text .desc h2 span {
     position: relative;
@@ -224,18 +377,17 @@ input[id="radio4"]:checked ~ .slide{
     transition: width .3s;
     mix-blend-mode: multiply;
 }
-#intro .content_wrap ul li .text .desc h2:hover {
-    color: lightgray;
+#intro .content_wrap ul li:hover .text .desc h2 {
+    color: var(--color-black);
 }
-#intro .content_wrap ul li .text .desc h2:hover span::after {
+#intro .content_wrap ul li:hover .text .desc h2 span::after {
     width: 100%;   
 }
-/*--------------------------*/
 
 
 /*무한 스크롤링 배너*/
 #banner {
-    width: 100%;
+    width: 1920px;
     height: 390px;
     overflow: hidden;
     background-color: var(--color-lightgray);
@@ -249,17 +401,13 @@ input[id="radio4"]:checked ~ .slide{
     overflow: hidden;
     transform: translateX(-160px) translateY(150px) rotate(-8deg);
 }
-#banner .wrap-box .rolling-list {
-    display: flex;
-    flex-shrink: 0;
-}
+#banner .wrap-box .rolling-list {display: flex;flex-shrink: 0;}
 #banner .wrap-box .rolling-list .list {
     font-family: EngFont;
     font-weight: 900;
     font-size: 48px;
     color: var(--color-lightgray);
-    letter-spacing: -3px;
-    
+    letter-spacing: -3px;   
 }
 @keyframes rolling1 {
 	0% { transform: translateX(0); }
@@ -271,22 +419,18 @@ input[id="radio4"]:checked ~ .slide{
 	0% { transform: translateX(0); }
 	100% { transform: translateX(-200%); }
 }
-
-.rolling-list.original {
-	animation: rolling1 30s linear infinite;
-}
-.rolling-list.clone {
-	animation: rolling2 30s linear infinite;
-}
+.rolling-list.original {animation: rolling1 30s linear infinite;}
+.rolling-list.clone {animation: rolling2 30s linear infinite;}
 
 
 /* :::::: 프로필 소개 설정 :::::: */
 #about {
-    width: 100%;
+    width: 1920px;
+    margin: 0 auto;
 }
 #about .profile {
     width: 100%;
-    height: 1000px;
+    height: 1400px;
     position: relative;
 }
 #about .profile .title {
@@ -357,16 +501,18 @@ input[id="radio4"]:checked ~ .slide{
     cursor: pointer;
 
     position: absolute;
-    left: 180px;
+    left: 200px;
     top: 650px;
 }
+
+/*마우스오버 시 기울기+뎁스 변화*/
 #about .profile .idcard:hover {
-    /*마우스오버 시 기울기+뎁스 변화*/
     rotate: 0deg;
     scale: 1.05;
     z-index: 50;
-    /* box-shadow: 5px 5px; */
+    box-shadow: 20px 35px var(--color-black);
 }
+
 #about .profile .idcard .profimg {
     float: left;
 }
@@ -399,6 +545,133 @@ input[id="radio4"]:checked ~ .slide{
     margin: 30px 0;
 }
 
+/*뱃지 스타일 설정*/
+#about .badge {
+    position: absolute;
+    bottom: 240px;
+    left: 230px;
+}
+#about .badge .box {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid var(--color-black);
+    background-color: #D9D9D9;
+    box-shadow: 10px 20px var(--color-black);
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 20px;
+
+    transition: .3s;
+    cursor: pointer;
+
+    transform-origin: 50% 50%;
+}
+#about .badge .box.ps img {
+    padding-top: 27px;
+}
+#about .badge .box.ai img {
+    padding-top: 23px;
+}
+#about .badge .box.fig img,
+#about .badge .box.vs img {
+    padding-top: 15px;
+}
+#about .badge .box.ps {
+    rotate: 6.16deg;
+    margin-top: 50px;
+}
+#about .badge .box.ai {
+    rotate: -1deg;
+}
+#about .badge .box.fig {
+    rotate: -5.08deg;
+    margin-top: 50px;
+}
+#about .badge .box.vs {
+    rotate: 1deg;
+}
+/*마우스오버 시 애니메이션*/
+#about .badge .box.ps:hover {
+    transform: translateX(-10px) translateY(20px);
+    rotate: 0deg;
+    z-index: 50;
+}
+#about .badge .box.ai:hover {
+    transform: translateX(0px) translateY(30px);
+    rotate: 0deg;
+    z-index: 50;
+}
+#about .badge .box.fig:hover {
+    transform: translateX(0px) translateY(20px);
+    rotate: 0deg;
+    z-index: 50;
+}
+#about .badge .box.vs:hover {
+    transform: translateX(10px) translateY(30px);
+    rotate: 0deg;
+    z-index: 50;
+}
+
+/*마우스오버 시 툴팁 표시*/
+/*말풍선 디자인1*/
+.tool {position: relative;}
+.tool::before,
+.tool::after {left: 50%;opacity: 0;position: absolute;z-index: -100;}
+.tool:hover::before,.tool:focus::before,.tool:hover::after,.tool:focus::after {
+    opacity: 1;transform: scale(1) translateY(0);z-index: 100;}
+.tool::after {
+    text-align: justify;
+    font-family: KorFont;
+    background: #fff;
+    border: 1px solid var(--color-black);
+    border-radius: .25em;
+    bottom: 120%; /*말풍선 표시 위치*/
+    color: var(--color-black);
+    content: attr(data-tip);
+    margin-left: -8.75em;
+    padding: 1em;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+    transform:  scale(.6) translateY(50%);  
+    width: 17.5em;
+}
+.tool:hover::after,.tool:focus::after  {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);}
+/*------------------------*/
+/*말풍선 디자인2*/
+.tool2 {position: relative;}
+.tool2::before,.tool2::after {left: 50%;opacity: 0;position: absolute;z-index: -100;}
+.tool2:hover::before,.tool2:focus::before,.tool2:hover::after,.tool2:focus::after {
+    opacity: 1;transform: scale(1) translateY(0);z-index: 100;}
+.tool2::after {
+    text-align: center;
+    font-family: KorFont;
+    background: #fff;
+    border: 1px solid var(--color-black);
+    border-radius: .25em;
+    top: -80px; /*말풍선 표시 위치*/
+    color: var(--color-black);
+    content: attr(data-tip);
+    margin-left: -8.75em;
+    padding: 1em;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+    transform:  scale(.6) translateY(50%);  
+    width: 17.5em;
+}
+.tool2:hover::after,.tool2:focus::after  {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);}
+/*------------------------*/
+
+/*모바일 버전*/
+@media (max-width: 760px) {
+    .tool::after { 
+        font-size: .75em;
+        margin-left: -5em;
+        width: 10em; 
+    }
+}
+
 /*이력서 스타일 설정*/
 #about .profile .memo {
     font-family: EngFont;
@@ -422,6 +695,7 @@ input[id="radio4"]:checked ~ .slide{
     scale: 1.05;
     /* box-shadow: 5px 5px; */
     z-index: 50;
+    box-shadow: 20px 40px var(--color-black);
 }
 #about .profile .ico {
     padding-top: 10px;
@@ -504,6 +778,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 /*--------------------------*/
 
+/*이력서들 위치/기울기 설정*/
 #about .profile .memo.first {
     rotate: 4.88deg;
 
@@ -515,13 +790,27 @@ input[id="radio4"]:checked ~ .slide{
     rotate: -7deg;
 
     position: absolute;
-    right: 180px;
+    right: 225px;
     top: 600px;
 }
+#about .profile .dummy1 {
+    position: absolute;
+    rotate: -3.75deg;
+    left: 1190px;
+    top: 680px;
+}
+#about .profile .dummy2 {
+    position: absolute;
+    rotate: -5.02deg;
+    left: 1220px;
+    top: 640px;
+}
+
 
 /* :::::: works 항목 스타일 :::::: */
 #works {
-    width: 100%;
+    width: 1920px;
+    margin: 0 auto;
 }
 #works .content_wrap .title {
     margin-left: 140px;
@@ -546,7 +835,8 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 컨택트 섹션 스타일 :::::: */
 #contact {
-    width: 100%;
+    width: 1920px;
+    margin: 0 auto;
     height: 1000px;
 }
 #contact .content_wrap {
@@ -565,6 +855,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .mail {
     transition: .3s;
+    cursor: pointer;
 
     width: 803px;
     height: 475px;
@@ -590,7 +881,7 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 푸터 :::::: */
 #footer {
-    width: 100%;
+    width: 1920px;;
     height: 212px;
     background-color: var(--color-black);
     padding-left: 140px;
