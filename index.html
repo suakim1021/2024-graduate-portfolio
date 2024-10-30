@@ -414,15 +414,77 @@
     
                 <div class="works_wrap">
                     <div class="buttons">
-                        <ul>
-                            <li><a href=""><button>ALL</button></a></li>
-                            <li><a href=""><button>UI·UX</button></a></li>
-                            <li><a href=""><button>WEB</button></a></li>
-                            <li><a href=""><button>GRAPHICS</button></a></li>
-                        </ul>
+                        <button class="category_btn selected" data-filter="*">ALL</button>
+                        <button class="category_btn" data-filter="uiux">UI·UX</button>
+                        <button class="category_btn" data-filter="web">WEB</button>
+                        <button class="category_btn" data-filter="graphic">GRAPHICS</button>
                     </div>
                     <div class="cards">
-                        
+                        <div class="work_projects">
+                            <div class="project" data-type2="uiux">
+                                <div class="project_desctiption">
+                                    <h3>UI·UX</h3>
+                                    <h2>맥딜리버리</h2>
+                                    <p>맥딜리버리 UIUX 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="uiux">
+                                <div class="project_desctiption">
+                                    <h3>UI·UX</h3>
+                                    <h2>안전신문고</h2>
+                                    <p>안전신문고 UIUX 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="web">
+                                <div class="project_desctiption">
+                                    <h3>WEB</h3>
+                                    <h2>윌라 웹사이트</h2>
+                                    <p>윌라 웹사이트 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="web">
+                                <div class="project_desctiption">
+                                    <h3>WEB</h3>
+                                    <h2>VDL 웹사이트</h2>
+                                    <p>VDL 웹사이트 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="web">
+                                <div class="project_desctiption">
+                                    <h3>WEB</h3>
+                                    <h2>맥딜리버리 웹</h2>
+                                    <p>맥딜리버리 웹 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="graphic">
+                                <div class="project_desctiption">
+                                    <h3>GRAPHICS</h3>
+                                    <h2>아이소매트릭 포스터</h2>
+                                    <p>아이소매트릭 포스터 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="graphic">
+                                <div class="project_desctiption">
+                                    <h3>GRAPHICS</h3>
+                                    <h2>한글날 포스터</h2>
+                                    <p>한글날 포스터 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="graphic">
+                                <div class="project_desctiption">
+                                    <h3>GRAPHICS</h3>
+                                    <h2>이상기후 앨범커버 디자인</h2>
+                                    <p>이상기후 앨범커버 디자인 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                            <div class="project" data-type2="graphic">
+                                <div class="project_desctiption">
+                                    <h3>GRAPHICS</h3>
+                                    <h2>시간 일러스트레이션</h2>
+                                    <p>시간 일러스트레이션 작업설명 어쩌고저쩌고</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -441,9 +503,18 @@
                         <button>SEND</button>
                     </div>
                 </div>
-                <div class="battery"></div>
-                <div class="lightbulb"></div>
-                <div class="smartphone"></div>
+                <div class="battery1">
+                    <img src="images/draw_battery1.png" alt="">
+                </div>
+                <div class="battery2">
+                    <img src="images/draw_battery2.png" alt="">
+                </div>
+                <div class="lightbulb">
+                    <img src="images/draw_bulb.png" alt="">
+                </div>
+                <div class="smartphone">
+                    <img src="images/draw_phone.png" alt="">
+                </div>
             </div>
         </section>
     
@@ -515,6 +586,39 @@
         roller.classList.add('original');
         clone.classList.add('clone');
 
+
+        //work project 버튼에 따라 필터링
+        const workBtnContainer = document.querySelector('.buttons');
+        const projectContainer = document.querySelector('.work_projects');
+        const projects = document.querySelectorAll('.project');
+
+        workBtnContainer.addEventListener('click', (e) => {
+            const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+            console.log(filter)
+            if(filter == null) {
+                return;
+            }
+
+            const active = document.querySelector('.category_btn.selected');
+            active.classList.remove('selected'); //클릭했을 때 selected라는 엘리먼트를 remove
+            const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode; // 타겟 노드네임과 'BUTTON'을 비교 (삼항연산자)
+            target.classList.add('selected');
+
+            projectContainer.classList.add('anim-out'); //클릭하면 프로젝트 항목 사라지게 하는 거
+            setTimeout(() => {  //1초(1000) 뒤에 function()기능이 실행됨
+
+                projects.forEach((project)=>{
+                    // 필터 타입과 프로젝트 타입이 같으면 invisible 지워 표출, 다르면 invisible 추가해 숨기기
+                    if(filter === '*' || filter === project.dataset.type2) {
+                        project.classList.remove('invisible');
+                    } else {
+                        project.classList.add('invisible');
+                    }
+                })
+
+                projectContainer.classList.remove('anim-out'); //지워졌던거 다시 나타나게
+            }, 1000)
+        })
     </script>
     
 </body>

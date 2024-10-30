@@ -814,6 +814,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #works .content_wrap .title {
     margin-left: 140px;
+    margin-bottom: 50px;
 }
 #works .content_wrap .title h2 {
     font-family: EngFont;
@@ -832,18 +833,105 @@ input[id="radio4"]:checked ~ .slide{
     margin-left: 10px;
 }
 
+/*버튼 스타일 설정*/
+#works .content_wrap .works_wrap .buttons {
+    margin-left: 140px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+#works .content_wrap .works_wrap .buttons button {
+    width: 236px;
+    height: 39px;
+    border: 1px solid var(--color-drakgray);
+    border-radius: 82px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: .3s;
+}
+#works .content_wrap .works_wrap .buttons:last-child {
+    margin-bottom: 0;
+}
+#works .content_wrap .works_wrap .buttons .category_btn:hover,
+#works .content_wrap .works_wrap .buttons .category_btn.selected {
+    background-color: var(--color-green);
+}
+
+#works .content_wrap .works_wrap .buttons button {
+    font-family: EngFont;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 39px;
+}
+
+/*프로젝트 항목 스타일 설정*/
+#works .content_wrap .works_wrap .cards {
+    width: 1283px;
+    height: 600px;
+    border: 3px solid blue;
+    
+    margin-left: 406px;
+}
+#works .content_wrap .works_wrap .cards .work_projects {
+    width: 100%;
+}
+#works .content_wrap .works_wrap .cards .project {
+    float: left;
+    background-color: orange;
+    height: 600px;
+    width: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    min-width: 202px;
+    border: 1px solid var(--color-drakgray);
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #fff;
+
+    opacity: 1;
+    margin-right: 15px;
+    padding: 20px 30px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#works .content_wrap .works_wrap .cards .project:hover {
+    width: 40%;
+}
+#works .content_wrap .works_wrap .cards .project:nth-child(1) {
+    background-image: url(images/cat.jpg);
+}
+
+#works .content_wrap .works_wrap .cards .project.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+}
+#works .content_wrap .works_wrap .cards .project.invisible {
+    display: none;
+}
 
 /* :::::: 컨택트 섹션 스타일 :::::: */
 #contact {
+    clear: both;
     width: 1920px;
     margin: 0 auto;
-    height: 1000px;
+    height: 890px;
 }
 #contact .content_wrap {
     position: relative;
+    height: 100%;
 }
-#contact .content_wrap .title {
-}
+
 #contact .content_wrap .title h2 {
     font-family: EngFont;
     font-size: 80px;
@@ -854,6 +942,9 @@ input[id="radio4"]:checked ~ .slide{
     text-align: center;
 }
 #contact .content_wrap .mail {
+    position: relative;
+    z-index: 5;
+
     transition: .3s;
     cursor: pointer;
 
@@ -869,6 +960,7 @@ input[id="radio4"]:checked ~ .slide{
 #contact .content_wrap .mail:hover {
     transform: translateX(20px) translateY(30px);
     box-shadow: 2px 2px var(--color-black);
+    /* z-index: 0; */
 }
 #contact .content_wrap .mail h3 {
     font-family: EngFont;
@@ -876,6 +968,87 @@ input[id="radio4"]:checked ~ .slide{
     font-weight: 400;
     letter-spacing: -3px;
     color: var(--color-black);
+}
+#contact .content_wrap .mail hr {
+    border: 1px dashed var(--color-drakgray);
+    margin: 15px 0px;
+}
+#contact .content_wrap .mail p {
+    font-family: KorFont;
+    font-size: 24px;
+    font-weight: 350;
+    color: gray;
+}
+#contact .content_wrap .mail .send {
+    position: absolute;
+    bottom: 35px;
+    right: 32px;
+}
+#contact .content_wrap .mail .send button {
+    width: 239px;
+    height: 52px;
+    border: 1px solid var(--color-black);
+    border-radius: 82px;
+    background-color: #fff;
+
+    font-family: EngFont;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 52px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+#contact .content_wrap .mail .send button:hover {
+    background-color: var(--color-black);
+    color: #fff;
+}
+
+#contact .content_wrap .battery1 {
+    position: absolute;
+    top: -40px;
+    left: 340px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#contact .content_wrap .battery1:hover {
+    rotate: -20deg;
+
+}
+#contact .content_wrap .battery2 {
+    position: absolute;
+    top: 100px;
+    left: 350px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#contact .content_wrap .battery2:hover {
+    rotate: -40deg;
+}
+#contact .content_wrap .lightbulb {
+    position: absolute;
+    bottom: 110px;
+    left: 210px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#contact .content_wrap .lightbulb:hover {
+    rotate: 30deg;
+}
+#contact .content_wrap .smartphone {
+    position: absolute;
+    bottom: 150px;
+    right: 200px;
+
+    transition: .3s;
+    cursor: pointer;
+}
+#contact .content_wrap .smartphone:hover {
+    rotate: 30deg;
 }
 
 
