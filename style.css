@@ -846,6 +846,7 @@ input[id="radio4"]:checked ~ .slide{
     border: 1px solid var(--color-drakgray);
     border-radius: 82px;
     background-color: #fff;
+    color: var(--color-black);
     text-align: center;
     margin-bottom: 10px;
     overflow: hidden;
@@ -856,11 +857,12 @@ input[id="radio4"]:checked ~ .slide{
 #works .content_wrap .works_wrap .buttons:last-child {
     margin-bottom: 0;
 }
+/*버튼 눌렀을 때 효과*/
 #works .content_wrap .works_wrap .buttons .category_btn:hover,
 #works .content_wrap .works_wrap .buttons .category_btn.selected {
     background-color: var(--color-green);
 }
-
+/*버튼 기본 스타일 설정*/
 #works .content_wrap .works_wrap .buttons button {
     font-family: EngFont;
     font-size: 24px;
@@ -879,6 +881,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #works .content_wrap .works_wrap .cards .work_projects {
     width: 100%;
+
 }
 #works .content_wrap .works_wrap .cards .project {
     float: left;
@@ -899,7 +902,7 @@ input[id="radio4"]:checked ~ .slide{
     color: #fff;
 
     opacity: 1;
-    margin-right: 15px;
+    margin-left: 15px;
     padding: 20px 30px;
 
     transition: .3s;
@@ -910,6 +913,24 @@ input[id="radio4"]:checked ~ .slide{
 }
 #works .content_wrap .works_wrap .cards .project:nth-child(1) {
     background-image: url(images/cat.jpg);
+}
+
+#works .content_wrap .works_wrap .cards .project .project_desctiption h3 {
+    font-family: EngFont;
+    font-size: 20px;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+#works .content_wrap .works_wrap .cards .project .project_desctiption h2 {
+    font-family: KorFont;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1.5px;
+}
+#works .content_wrap .works_wrap .cards .project .project_desctiption p {
+    font-family: KorFont;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 #works .content_wrap .works_wrap .cards .project.anim-out {
