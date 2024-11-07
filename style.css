@@ -875,64 +875,144 @@ input[id="radio4"]:checked ~ .slide{
 #works .content_wrap .works_wrap .cards {
     width: 1283px;
     height: 600px;
-    border: 3px solid blue;
-    
     margin-left: 406px;
 }
 #works .content_wrap .works_wrap .cards .work_projects {
     width: 100%;
-
 }
+/*프로젝트 큰 덩어리*/
 #works .content_wrap .works_wrap .cards .project {
-    float: left;
-    background-color: orange;
-    height: 600px;
-    width: 200px;
+    padding: 0;
+    width: 100%;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
 
     display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    justify-content: right;
+}
+/*프로젝트 작은 덩어리*/
+#works .content_wrap .works_wrap .cards .project .inner_card {
+    margin-left: 15px;
 
-    min-width: 202px;
+    background-color: lightgray;
+    padding: 20px 20px;
+
+    height: 600px;
+    min-width: 200px;
+    width: calc(100%/2);
+
     border: 1px solid var(--color-drakgray);
     border-radius: 15px;
     background-repeat: no-repeat;
     background-size: cover;
 
-    color: #fff;
-
-    opacity: 1;
-    margin-left: 15px;
-    padding: 20px 30px;
-
     transition: .3s;
-    cursor: pointer;
 }
-#works .content_wrap .works_wrap .cards .project:hover {
-    width: 40%;
+#works .content_wrap .works_wrap .cards .project .inner_card:nth-child(1) {
+    margin-left: 0;
 }
-#works .content_wrap .works_wrap .cards .project:nth-child(1) {
-    background-image: url(images/cat.jpg);
+#works .content_wrap .works_wrap .cards .project .inner_card:hover {
+    width: 80%;
 }
 
-#works .content_wrap .works_wrap .cards .project .project_desctiption h3 {
+#works .content_wrap .works_wrap .cards .project .project_description h3 {
     font-family: EngFont;
     font-size: 20px;
     letter-spacing: -3px;
     margin-bottom: 20px;
 }
-#works .content_wrap .works_wrap .cards .project .project_desctiption h2 {
+#works .content_wrap .works_wrap .cards .project .project_description h2 {
     font-family: KorFont;
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 1.5px;
 }
-#works .content_wrap .works_wrap .cards .project .project_desctiption p {
+#works .content_wrap .works_wrap .cards .project .project_description p {
     font-family: KorFont;
     font-size: 15px;
     font-weight: 300;
+    display: inline-block;
+    width: 180px;
 }
 
+/*----------배경 이미지----------*/
+/*MAIN*/
+.main .inner_card:nth-child(1) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/main_1.png);
+}
+.main .inner_card:nth-child(2) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/main_2.png);
+}
+.main .inner_card:nth-child(3) {
+    background-image: url(images/cat.jpg);
+}
+.main .inner_card:nth-child(4) {
+    background-image: url(images/cat.jpg);
+}
+.main .inner_card:nth-child(5) {
+    background-image: url(images/cat.jpg);
+}
+/*UI/UX*/
+.uiux .inner_card:nth-child(1) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/uiux_1.png);
+}
+.uiux .inner_card:nth-child(2) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/uiux_2.png);
+}
+.uiux .inner_card:nth-child(3) {
+    background-image: url(images/cat.jpg);
+}
+/*WEB*/
+.web .inner_card:nth-child(1) {
+    background-image: url(images/cat.jpg);
+}
+.web .inner_card:nth-child(2) {
+    background-image: url(images/cat.jpg);
+}
+.web .inner_card:nth-child(3) {
+    background-image: url(images/cat.jpg);
+}
+.web .inner_card:nth-child(4) {
+    background-image: url(images/cat.jpg);
+}
+/*GRAPHICS*/
+.graphic .inner_card:nth-child(1) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_1.png);
+}
+.graphic .inner_card:nth-child(2) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_2.png);
+}
+.graphic .inner_card:nth-child(3) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_3.png);
+}
+.graphic .inner_card:nth-child(4) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_4.png);
+}
+.graphic .inner_card:nth-child(5) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_5.png);
+}
+/*--------------------*/
+
+/*애니메이션 효과*/
 #works .content_wrap .works_wrap .cards .project.anim-out {
     opacity: 0;
     transform: scale(0.96) translateY(40px);
