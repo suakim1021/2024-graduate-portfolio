@@ -26,7 +26,10 @@
 }
 
 body {
-    background-color: var(--color-black);
+    background-color: var(--color-lightgray);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .all_wrap {
@@ -130,15 +133,21 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 히어로 섹션 스타일 설정 :::::: */
 #main {
+    position: relative;
     width: 1920px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 }
+#main .hero_pipe_1 {
+    position: absolute;
+    bottom: 0px;
+    left: -150px;
+}
 #main .title {
     padding-left: 140px;
-    padding-top: 310px;
+    padding-top: 220px;
 }
 #main .title h3 {
     font-family: EngFont;
@@ -160,8 +169,89 @@ input[id="radio4"]:checked ~ .slide{
     transition: .3s;
     cursor: pointer;
 }
+
+/*메인 오브젝트 위치*/
 #main .object {
+    position: relative;
     padding-top: 80px;
+}
+/*위치+애니메이션*/
+/*전구*/
+#main .object .hero_bulb {
+    position: absolute;
+    left: 115px;
+    top: 480px;
+
+    animation: hero_ani_bulb 1.5s infinite alternate;
+}
+@keyframes hero_ani_bulb {100% {top: 520px;}}
+
+/*핸드폰*/
+#main .object .hero_phone1 {
+    position: absolute;
+    left: 150px;
+    top: 95px;
+
+    animation: hero_ani_phone1 2.5s infinite alternate;
+}
+@keyframes hero_ani_phone1 {100% {left: 120px; top: 130px;}}
+#main .object .hero_phone2 {
+    position: absolute;
+    left: 170px;
+    top: 120px;
+
+    animation: hero_ani_phone2 2s infinite alternate;
+}
+@keyframes hero_ani_phone2 {100% {top: 210px;}}
+#main .object .hero_phone3 {
+    position: absolute;
+    left: 280px;
+    top: 270px;
+
+    animation: hero_ani_phone3 2s infinite alternate;
+}
+@keyframes hero_ani_phone3 {100% {top: 200px;}}
+#main .object .hero_phone4 {
+    position: absolute;
+    left: 258px;
+    top: 125px;
+
+    animation: hero_ani_phone4 2.5s infinite alternate;
+}
+@keyframes hero_ani_phone4 {100% {top: 90px;}}
+
+/*배터리*/
+#main .object .group .hero_battery_1 {
+    position: absolute;
+    right: 160px;
+    top: 500px;
+
+    animation: hero_ani_battery1 2.5s infinite alternate;
+}
+@keyframes hero_ani_battery1 {100% {right: 120px; top: 480px;}}
+
+#main .object .group .hero_battery_2 {
+    position: absolute;
+    right: 305px;
+    top: 595px;
+
+    animation: hero_ani_battery2 2.5s infinite alternate;
+}
+@keyframes hero_ani_battery2 {100% {right: 340px; top: 615px;}}
+
+#main .object .group .hero_battery_3 {
+    position: absolute;
+    right: 315px;
+    top: 606px;
+
+    animation: hero_ani_battery3 2.5s infinite alternate;
+}
+@keyframes hero_ani_battery3 {100% {right: 410px; top: 656px;}}
+
+#main .object .hero_pipe_2 {
+    position: absolute;
+    right: -100px;
+    top: 150px;
 }
 
 /*마우스오버 형광펜 밑줄 효과*/
@@ -194,7 +284,7 @@ input[id="radio4"]:checked ~ .slide{
 #intro {
     width: 1920px;
     margin: 0 auto;
-    padding-top: 400px;
+    padding-top: 200px;
     padding-bottom: 296px;
 }
 #intro .content_wrap {
@@ -384,6 +474,22 @@ input[id="radio4"]:checked ~ .slide{
     width: 100%;   
 }
 
+/*안내문구*/
+.notice {
+    padding-bottom: 100px;
+    text-align: center;
+}
+.notice button {
+    border: 1px solid var(--color-drakgray);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    opacity: .5;
+    animation: ani_notice 2s infinite alternate;
+}
+@keyframes ani_notice {
+    100% {transform: translateY(20px);}
+}
 
 /*무한 스크롤링 배너*/
 #banner {
@@ -422,6 +528,49 @@ input[id="radio4"]:checked ~ .slide{
 .rolling-list.original {animation: rolling1 30s linear infinite;}
 .rolling-list.clone {animation: rolling2 30s linear infinite;}
 
+/*무한 스크롤링 배너2*/
+#banner2 {
+    width: 1920px;
+    height: 390px;
+    overflow: hidden;
+    background-color: var(--color-lightgray);
+    user-select: none;
+}
+#banner2 .wrap-box-2 {
+    display: flex;
+    width: 120%;
+    padding: 10px 0;
+    background-color: var(--color-black);
+    overflow: hidden;
+    transform: translateX(-160px) translateY(150px) rotate(8deg);
+}
+#banner2 .wrap-box-2 .rolling-list-2 { 
+    display: flex; 
+    flex-shrink: 0; 
+}
+#banner2 .wrap-box-2 .rolling-list-2 .list {
+    font-family: EngFont;
+    font-weight: 900;
+    font-size: 48px;
+    color: var(--color-lightgray);
+    letter-spacing: -3px;   
+}
+@keyframes rolling1-2 {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes rolling2-2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200%); }
+}
+
+.rolling-list-2.original-2 {
+    animation: rolling1-2 30s linear infinite;
+}
+.rolling-list-2.clone-2 {
+    animation: rolling2-2 30s linear infinite;
+}
 
 /* :::::: 프로필 소개 설정 :::::: */
 #about {
@@ -442,7 +591,7 @@ input[id="radio4"]:checked ~ .slide{
     font-weight: 900;
     letter-spacing: -3px;
     line-height: 78px;
-    color: var(--color-black);
+    color: lightgray;
     text-align: center;
     margin-bottom: 28px;
     transition: .3s;
@@ -467,7 +616,7 @@ input[id="radio4"]:checked ~ .slide{
     mix-blend-mode: multiply;
 }
 #about .profile .title h2:hover {
-    color: lightgray;
+    color: var(--color-black);
 }
 #about .profile .title h2:hover span::after {
     width: 100%;   
@@ -812,6 +961,7 @@ input[id="radio4"]:checked ~ .slide{
     width: 1920px;
     height: 1000px;
     margin: 0 auto;
+    padding-top: 80px;
 }
 #works .content_wrap .title {
     margin-left: 140px;
@@ -1036,9 +1186,10 @@ input[id="radio4"]:checked ~ .slide{
 /* :::::: 컨택트 섹션 스타일 :::::: */
 #contact {
     clear: both;
-    width: 1920px;
+    width: 1900px;
     margin: 0 auto;
     height: 890px;
+    padding-top: 100px;
 }
 #contact .content_wrap {
     position: relative;
@@ -1120,7 +1271,7 @@ input[id="radio4"]:checked ~ .slide{
 
 #contact .content_wrap .battery1 {
     position: absolute;
-    top: -40px;
+    top: -140px;
     left: 340px;
 
     transition: .3s;
@@ -1132,7 +1283,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .battery2 {
     position: absolute;
-    top: 100px;
+    top: 0px;
     left: 350px;
 
     transition: .3s;
@@ -1143,7 +1294,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .lightbulb {
     position: absolute;
-    bottom: 110px;
+    bottom: -150px;
     left: 210px;
 
     transition: .3s;
@@ -1154,7 +1305,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .smartphone {
     position: absolute;
-    bottom: 150px;
+    top: -100px;
     right: 200px;
 
     transition: .3s;
@@ -1183,3 +1334,15 @@ input[id="radio4"]:checked ~ .slide{
 #footer .txt_wrap ul li span {
     margin-right: 20px;
 }
+
+/* :::::: ScrollTrigger에 사용되는 CS ::::::S */
+.magic-slide {opacity: 0; transition: 1s;}
+.magic-slide.to-down {transform: translateY(-150px);}
+.magic-slide.to-up {transform: translateY(150px);}
+.magic-slide.to-right {transform: translateX(-150px);}
+.show .magic-slide {opacity: 1; transform: translateY(0);}
+.show .magic-slide.delay-0 {transition-delay: 0s;}
+.show .magic-slide.delay-1 {transition-delay:0.6s;}
+.show .magic-slide.delay-2 {transition-delay:1.2s;}
+.show .magic-slide.delay-3 {transition-delay:1.8s;}
+.show .magic-slide.delay-4 {transition-delay:2.4s;}
