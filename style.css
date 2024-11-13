@@ -32,6 +32,10 @@ body {
     overflow-y: scroll;
 }
 
+::selection {
+    background: var(--color-green);
+}
+
 .all_wrap {
     width: 1900px;
     overflow: hidden;
