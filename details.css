@@ -175,7 +175,7 @@ input[id="radio4"]:checked ~ .slide{
 /* :::::: 인트로 :::::: */
 #intro {
     width: 100%;
-    height: 2000px;
+    height: 1500px;
 
     padding-top: 220px;
 
