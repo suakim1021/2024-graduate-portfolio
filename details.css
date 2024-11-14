@@ -29,6 +29,10 @@
     background: var(--color-green);
 }
 
+body {
+    color: var(--color-black);
+}
+
 /* :::::: 내비게이션 스타일 설정 :::::: */
 /*The outer container components*/
 .container{
@@ -144,6 +148,10 @@ input[id="radio4"]:checked ~ .slide{
     height: 76vh;
     background-color: lightgray;
     border-bottom: 1px solid var(--color-black);
+    overflow: hidden;
+}
+#main .main_bg img {
+    width: 100%;
 }
 
 .title {
@@ -167,10 +175,10 @@ input[id="radio4"]:checked ~ .slide{
 }
 .title .subtitle .hr {
     float: left;
-    height: 30px;
+    height: 32px;
     width: 300px;
     margin: 0px 10px;
-    border-bottom: 2px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
 }
 
 /* :::::: 인트로 :::::: */
@@ -216,6 +224,12 @@ input[id="radio4"]:checked ~ .slide{
     border-radius: 40px;
     background-color: lightgray;
     border: 1px solid var(--color-black);
+
+    overflow: hidden;
+}
+#intro .phone img {
+    width: 100%;
+    height: 100%;
 }
 
 /* :::::: 본문 :::::: */
@@ -236,12 +250,16 @@ input[id="radio4"]:checked ~ .slide{
 }
 #article .img {
     width: 100%;
-    height: 665px;
+    height: 800px;
     background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
     border: 1px solid var(--color-black);
+}
+
+#article .img img {
+    width: 100%;
 }
 
 /* :::::: ScrollTrigger에 사용되는 CS ::::::S */
