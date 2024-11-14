@@ -115,17 +115,18 @@ input[id="radio4"]:checked ~ .slide{
 .progress-container {
     width: 100%;
     /* 프로그래스 배경 색상 */
-    background-color: lightgray;
+    background-color: #ededed;
     /* 상단에 위치하기 위함 */
     position: fixed;
-    bottom: 0;
+    top: 0;
     z-index: 55;
     border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
 }
 
 .progress-bar {
     /* 프로그래스바 높이 */
-    height: 20px;
+    height: 10px;
     /* 프로그래스바 색상 */
     background-color: var(--color-green);
     width: 0;
@@ -216,3 +217,41 @@ input[id="radio4"]:checked ~ .slide{
     background-color: lightgray;
     border: 1px solid var(--color-black);
 }
+
+/* :::::: 본문 :::::: */
+#article {
+    width: 1467px;
+    margin: auto;
+    margin-bottom: 170px;
+}
+#article .text {
+    text-align: left;
+    margin-bottom: 50px;
+}
+#article .text h3 {
+    font-size: 48px;
+}
+#article .text p {
+    font-size: 24px;
+}
+#article .img {
+    width: 100%;
+    height: 665px;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--color-black);
+}
+
+/* :::::: ScrollTrigger에 사용되는 CS ::::::S */
+.magic-slide {opacity: 0; transition: 1s;}
+.magic-slide.to-down {transform: translateY(-150px);}
+.magic-slide.to-up {transform: translateY(150px);}
+.magic-slide.to-right {transform: translateX(-150px);}
+.show .magic-slide {opacity: 1; transform: translateY(0);}
+.show .magic-slide.delay-0 {transition-delay: 0s;}
+.show .magic-slide.delay-1 {transition-delay:0.6s;}
+.show .magic-slide.delay-2 {transition-delay:1.2s;}
+.show .magic-slide.delay-3 {transition-delay:1.8s;}
+.show .magic-slide.delay-4 {transition-delay:2.4s;}
