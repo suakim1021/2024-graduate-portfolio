@@ -37,7 +37,7 @@ body {
 }
 
 .all_wrap {
-    width: 100%;
+    width: 98.95833vw;
     overflow: hidden;
     margin: auto;
 }
@@ -55,7 +55,7 @@ a {
 .container{
     position: fixed;
     left: 0;
-    top: 22px; /*1.1458vw*/
+    top: 1.14583vw;
     right: 0;
     display: flex;
     justify-content: center;
@@ -65,14 +65,14 @@ a {
 }
 
 .tabs{
-    width: 630px;
-    height: 80px;
+    width: 32.8125vw;
+    height: 4.16667vw;
     display: flex;
     position: relative;
     background-color: #fff;
-    border: 1px solid black;
+    border: 0.05208vw solid black;
     padding:0.75rem;
-    border-radius:99px;
+    border-radius:5.15625vw;
 }
 
 .tabs *{
@@ -86,9 +86,9 @@ input[type="radio"]{display: none;}
     display: flex;
     align-items: center;
     justify-content: center;
-    height:54px;
-    width:150px;
-    border-radius: 99px;
+    height:2.8125vw;
+    width:7.8125vw;
+    border-radius: 5.15625vw;
     cursor:pointer;
     transition: color 0.15s ease-in;
 }
@@ -114,21 +114,21 @@ input[id="radio4"]:checked ~ .slide{
 
 .tabs label {
     font-family: EngFont;
-    font-size: 16px;
+    font-size: 0.83333vw;
     font-weight: 400;
 }
 .slide{
     position: absolute;
     display: flex;
-    height: 54px;
-    width:150px;
+    height: 2.8125vw;
+    width:7.8125vw;
     background-color: var(--color-green);
-    border: 1px solid black;
+    border: 0.05208vw solid black;
     z-index:1;
-    border-radius:99px;
+    border-radius:5.15625vw;
     transition: 0.25s ease-out;
 }
-@media (max-width:700px){
+@media (max-width:36.45833vw){
     .tabs{
         transform:scale(0.6);
     }
@@ -138,37 +138,36 @@ input[id="radio4"]:checked ~ .slide{
 /* :::::: 히어로 섹션 스타일 설정 :::::: */
 #main {
     position: relative;
-    width: 100%; /*1920px*/
+    width: 100.0vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
 }
-
 #main .hero_pipe_1 {
     position: absolute;
-    bottom: 0px;
-    left: -150px;
+    bottom: 0.0vw;
+    left: -7.8125vw;
 }
 #main .title {
-    padding-left: 140px;
-    padding-top: 220px;
+    padding-left: 7.29167vw;
+    padding-top: 11.45833vw;
 }
 #main .title h3 {
     font-family: EngFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 300;
-    margin-bottom: 5px;
-    letter-spacing: 8px;
+    margin-bottom: 0.26042vw;
+    letter-spacing: 0.41667vw;
     color: var(--color-black);
 }
 #main .title h1 {
     font-family: KorFont;
-    font-size: 108px;
-    margin-left: -10px;
+    font-size: 5.625vw;
+    margin-left: -0.52083vw;
     font-weight: 900;
-    line-height: 134px;
-    letter-spacing: -3px;
+    line-height: 6.97917vw;
+    letter-spacing: -0.15625vw;
     color: lightgray;
 
     transition: .3s;
@@ -178,85 +177,85 @@ input[id="radio4"]:checked ~ .slide{
 /*메인 오브젝트 위치*/
 #main .object {
     position: relative;
-    padding-top: 80px;
+    padding-top: 4.16667vw;
 }
 /*위치+애니메이션*/
 /*전구*/
 #main .object .hero_bulb {
     position: absolute;
-    left: 115px;
-    top: 480px;
+    left: 5.98958vw;
+    top: 25.0vw;
 
     animation: hero_ani_bulb 1.5s infinite alternate;
 }
-@keyframes hero_ani_bulb {100% {top: 520px;}}
+@keyframes hero_ani_bulb {100% {top: 27.08333vw;}}
 
 /*핸드폰*/
 #main .object .hero_phone1 {
     position: absolute;
-    left: 150px;
-    top: 95px;
+    left: 7.8125vw;
+    top: 4.94792vw;
 
     animation: hero_ani_phone1 2.5s infinite alternate;
 }
-@keyframes hero_ani_phone1 {100% {left: 120px; top: 130px;}}
+@keyframes hero_ani_phone1 {100% {left: 6.25vw; top: 6.77083vw;}}
 #main .object .hero_phone2 {
     position: absolute;
-    left: 170px;
-    top: 120px;
+    left: 8.85417vw;
+    top: 6.25vw;
 
     animation: hero_ani_phone2 2s infinite alternate;
 }
-@keyframes hero_ani_phone2 {100% {top: 210px;}}
+@keyframes hero_ani_phone2 {100% {top: 10.9375vw;}}
 #main .object .hero_phone3 {
     position: absolute;
-    left: 280px;
-    top: 270px;
+    left: 14.58333vw;
+    top: 14.0625vw;
 
     animation: hero_ani_phone3 2s infinite alternate;
 }
-@keyframes hero_ani_phone3 {100% {top: 200px;}}
+@keyframes hero_ani_phone3 {100% {top: 10.41667vw;}}
 #main .object .hero_phone4 {
     position: absolute;
-    left: 258px;
-    top: 125px;
+    left: 13.4375vw;
+    top: 6.51042vw;
 
     animation: hero_ani_phone4 2.5s infinite alternate;
 }
-@keyframes hero_ani_phone4 {100% {top: 90px;}}
+@keyframes hero_ani_phone4 {100% {top: 4.6875vw;}}
 
 /*배터리*/
 #main .object .group .hero_battery_1 {
     position: absolute;
-    right: 160px;
-    top: 500px;
+    right: 8.33333vw;
+    top: 26.04167vw;
 
     animation: hero_ani_battery1 2.5s infinite alternate;
 }
-@keyframes hero_ani_battery1 {100% {right: 120px; top: 480px;}}
+@keyframes hero_ani_battery1 {100% {right: 6.25vw; top: 25.0vw;}}
 
 #main .object .group .hero_battery_2 {
     position: absolute;
-    right: 305px;
-    top: 595px;
+    right: 15.88542vw;
+    top: 30.98958vw;
 
     animation: hero_ani_battery2 2.5s infinite alternate;
 }
-@keyframes hero_ani_battery2 {100% {right: 340px; top: 615px;}}
+@keyframes hero_ani_battery2 {100% {right: 17.70833vw; top: 32.03125vw;}}
 
 #main .object .group .hero_battery_3 {
     position: absolute;
-    right: 315px;
-    top: 606px;
+    right: 16.40625vw;
+    top: 31.5625vw;
 
     animation: hero_ani_battery3 2.5s infinite alternate;
 }
-@keyframes hero_ani_battery3 {100% {right: 410px; top: 656px;}}
+@keyframes hero_ani_battery3 {100% {right: 21.35417vw; top: 34.16667vw;}}
 
 #main .object .hero_pipe_2 {
     position: absolute;
-    right: -100px;
-    top: 150px;
+    right: -5.20833vw;
+    top: 7.8125vw;
 }
 
 /*마우스오버 형광펜 밑줄 효과*/
@@ -268,10 +267,10 @@ input[id="radio4"]:checked ~ .slide{
     content: '';
     display: block;
     width: 0;
-    height: 95px;
+    height: 4.94792vw;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0.0vw;
     background: var(--color-green);
     transition: width .3s;
     mix-blend-mode: multiply;
@@ -287,29 +286,29 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 세가지소개 스타일 설정 :::::: */
 #intro {
-    width: 1920px;
+    width: 100.0vw;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 296px;
+    padding-top: 10.41667vw;
+    padding-bottom: 15.41667vw;
 }
 #intro .content_wrap {
-    padding: 0px 293px;
+    padding: 0.0vw 15.26042vw;
 }
 #intro .content_wrap ul {
     display: flex;
     justify-content: space-between;
 }
 #intro .content_wrap ul li {
-    width: 370px;
+    width: 19.27083vw;
     color: var(--color-black);
     cursor: pointer;
 }
 #intro .content_wrap ul li .object {
     position: relative;
     width: auto;
-    height: 270px;
-    margin-bottom: 60px;
-    padding-left: 70px;
+    height: 14.0625vw;
+    margin-bottom: 3.125vw;
+    padding-left: 3.64583vw;
 }
 
 /*이미지 기본 위치 설정*/
@@ -321,8 +320,8 @@ input[id="radio4"]:checked ~ .slide{
 /*전구 이미지 조립*/
 #intro .content_wrap ul li .object.bulb img:nth-child(2) {
     position: absolute;
-    bottom: 125px;
-    left: 95px;
+    bottom: 6.51042vw;
+    left: 4.94792vw;
 
     animation: ani_bulb 1.5s infinite alternate;
 }
@@ -344,24 +343,24 @@ input[id="radio4"]:checked ~ .slide{
 }
 #intro .content_wrap ul li .object.battery .group img:nth-child(1) {
     position: absolute;
-    bottom: 175px;
-    left: 65px;
+    bottom: 9.11458vw;
+    left: 3.38542vw;
     z-index: 4;
 
     animation: ani_battery1 2s infinite alternate;
 }
 #intro .content_wrap ul li .object.battery .group img:nth-child(2) {
     position: absolute;
-    bottom: 190px;
-    left: 95px;
+    bottom: 9.89583vw;
+    left: 4.94792vw;
     z-index: 3;
 
     animation: ani_battery2 2s infinite alternate;
 }
 #intro .content_wrap ul li .object.battery .group img:nth-child(3) {
     position: absolute;
-    bottom: 180px;
-    left: 95px;
+    bottom: 9.375vw;
+    left: 4.94792vw;
     z-index: 2;
 
     animation: ani_battery3 2s infinite alternate;
@@ -370,24 +369,24 @@ input[id="radio4"]:checked ~ .slide{
 /*핸드폰 이미지 조립*/
 #intro .content_wrap ul li .object.phone img:nth-child(2) {
     position: absolute;
-    bottom: -10px;
-    left: 110px;
+    bottom: -0.52083vw;
+    left: 5.72917vw;
     z-index: 2;
 
     animation: ani_phone1 3s infinite alternate;
 }
 #intro .content_wrap ul li .object.phone img:nth-child(3) {
     position: absolute;
-    bottom: 40px;
-    left: 250px;
+    bottom: 2.08333vw;
+    left: 13.02083vw;
     z-index: 3;
 
     animation: ani_phone2 2s infinite alternate;
 }
 #intro .content_wrap ul li .object.phone img:nth-child(4) {
     position: absolute;
-    bottom: 35px;
-    left: 160px;
+    bottom: 1.82292vw;
+    left: 8.33333vw;
     z-index: 4;
 
     animation: ani_phone3 2s infinite alternate;
@@ -395,36 +394,36 @@ input[id="radio4"]:checked ~ .slide{
 
 /*애니메이션 설정*/
 @keyframes ani_bulb {
-    0% {bottom: 125px;left: 95px;}
-    100% {bottom: 170px;left: 95px;}
+    0% {bottom: 6.51042vw;left: 4.94792vw;}
+    100% {bottom: 8.85417vw;left: 4.94792vw;}
 }
 @keyframes ani_battery {
-    0% {transform: translateX(-80px) translateY(250px);}
-    100% {transform: translateX(-80px) translateY(340px);}
+    0% {transform: translateX(-4.16667vw) translateY(13.02083vw);}
+    100% {transform: translateX(-4.16667vw) translateY(17.70833vw);}
 }
 @keyframes ani_battery1 {
-    0% {bottom: 165px;left: 55px;}
-    100% {bottom: 197px;left: 95px;}
+    0% {bottom: 8.59375vw;left: 2.86458vw;}
+    100% {bottom: 10.26042vw;left: 4.94792vw;}
 }
 @keyframes ani_battery2 {
-    0% {bottom: 180px;left: 80px;}
-    100% {bottom: 195px;left: 100px;}
+    0% {bottom: 9.375vw;left: 4.16667vw;}
+    100% {bottom: 10.15625vw;left: 5.20833vw;}
 }
 @keyframes ani_battery3 {
-    0% {bottom: 185px;left: 95px;}
-    100% {bottom: 177px;left: 88px;}
+    0% {bottom: 9.63542vw;left: 4.94792vw;}
+    100% {bottom: 9.21875vw;left: 4.58333vw;}
 }
 @keyframes ani_phone1 {
-    0% {bottom: 0px;left: 85px;}
-    100% {bottom: -10px;left: 110px;}
+    0% {bottom: 0.0vw;left: 4.42708vw;}
+    100% {bottom: -0.52083vw;left: 5.72917vw;}
 }
 @keyframes ani_phone2 {
-    0% {bottom: 70px;left: 250px;}
-    100% {bottom: 40px;left: 250px;}
+    0% {bottom: 3.64583vw;left: 13.02083vw;}
+    100% {bottom: 2.08333vw;left: 13.02083vw;}
 }
 @keyframes ani_phone3 {
-    0% {bottom: -10px;left: 160px;}
-    100% {bottom: 65px;left: 160px;}
+    0% {bottom: -0.52083vw;left: 8.33333vw;}
+    100% {bottom: 3.38542vw;left: 8.33333vw;}
 }
 
 /*텍스트 스타일 + 네모칸 숫자 설정*/
@@ -433,26 +432,26 @@ input[id="radio4"]:checked ~ .slide{
 }
 #intro .content_wrap ul li .text .desc h2 {
     font-family: KorFont;
-    font-size: 64px;
-    line-height: 85px;
+    font-size: 3.33333vw;
+    line-height: 4.42708vw;
     font-weight: 900;
-    letter-spacing: -3px;
+    letter-spacing: -0.15625vw;
     transition: .3s;
     color: lightgray;
 }
 #intro .content_wrap ul li .text .number {
     float: left;
-    margin-right: 27px;
-    margin-top: 17px;
+    margin-right: 1.40625vw;
+    margin-top: 0.88542vw;
     font-family: EngFont;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--color-black);
+    width: 2.29167vw;
+    height: 2.29167vw;
+    border: 0.05208vw solid var(--color-black);
     background-color: #fff;
     text-align: center;
 }
 #intro .content_wrap ul li .text .number h2 {
-    line-height: 43px;
+    line-height: 2.23958vw;
 }
 
 /*마우스오버 형광펜 밑줄 효과*/
@@ -464,10 +463,10 @@ input[id="radio4"]:checked ~ .slide{
     content: '';
     display: block;
     width: 0;
-    height: 50px;
+    height: 2.60417vw;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0.0vw;
     background: var(--color-green);
     transition: width .3s;
     mix-blend-mode: multiply;
@@ -481,25 +480,25 @@ input[id="radio4"]:checked ~ .slide{
 
 /*안내문구*/
 .notice {
-    padding-bottom: 100px;
+    padding-bottom: 5.20833vw;
     text-align: center;
 }
 .notice button {
-    border: 1px solid var(--color-drakgray);
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border: 0.05208vw solid var(--color-drakgray);
+    border-radius: 1.5625vw;
+    padding: 0.52083vw 1.04167vw;
+    font-size: 0.83333vw;
     opacity: .5;
     animation: ani_notice 2s infinite alternate;
 }
 @keyframes ani_notice {
-    100% {transform: translateY(20px);}
+    100% {transform: translateY(1.04167vw);}
 }
 
 /*무한 스크롤링 배너*/
 #banner {
-    width: 100%;
-    height: 390px;
+    width: 100.0vw;
+    height: 20.3125vw;
     overflow: hidden;
     background-color: var(--color-lightgray);
     user-select: none;
@@ -507,18 +506,18 @@ input[id="radio4"]:checked ~ .slide{
 #banner .wrap-box {
     display: flex;
     width: 120%;
-    padding: 10px 0;
+    padding: 0.52083vw 0;
     background-color: var(--color-black);
     overflow: hidden;
-    transform: translateX(-160px) translateY(150px) rotate(-8deg);
+    transform: translateX(-8.33333vw) translateY(7.8125vw) rotate(-8deg);
 }
 #banner .wrap-box .rolling-list {display: flex;flex-shrink: 0;}
 #banner .wrap-box .rolling-list .list {
     font-family: EngFont;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 2.5vw;
     color: var(--color-lightgray);
-    letter-spacing: -3px;   
+    letter-spacing: -0.15625vw;   
 }
 @keyframes rolling1 {
 	0% { transform: translateX(0); }
@@ -535,8 +534,8 @@ input[id="radio4"]:checked ~ .slide{
 
 /*무한 스크롤링 배너2*/
 #banner2 {
-    width: 100%;
-    height: 390px;
+    width: 100.0vw;
+    height: 20.3125vw;
     overflow: hidden;
     background-color: var(--color-lightgray);
     user-select: none;
@@ -544,10 +543,10 @@ input[id="radio4"]:checked ~ .slide{
 #banner2 .wrap-box-2 {
     display: flex;
     width: 120%;
-    padding: 10px 0;
+    padding: 0.52083vw 0;
     background-color: var(--color-black);
     overflow: hidden;
-    transform: translateX(-160px) translateY(150px) rotate(8deg);
+    transform: translateX(-8.33333vw) translateY(7.8125vw) rotate(8deg);
 }
 #banner2 .wrap-box-2 .rolling-list-2 { 
     display: flex; 
@@ -556,9 +555,9 @@ input[id="radio4"]:checked ~ .slide{
 #banner2 .wrap-box-2 .rolling-list-2 .list {
     font-family: EngFont;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 2.5vw;
     color: var(--color-lightgray);
-    letter-spacing: -3px;   
+    letter-spacing: -0.15625vw;   
 }
 @keyframes rolling1-2 {
     0% { transform: translateX(0); }
@@ -579,26 +578,26 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 프로필 소개 설정 :::::: */
 #about {
-    width: 1920px;
+    width: 100.0vw;
     margin: 0 auto;
 }
 #about .profile {
     width: 100%;
-    height: 1400px;
+    height: 72.91667vw;
     position: relative;
 }
 #about .profile .title {
-    padding-top:170px;
+    padding-top:8.85417vw;
 }
 #about .profile .title h2 {
     font-family: KorFont;
-    font-size: 64px;
+    font-size: 3.33333vw;
     font-weight: 900;
-    letter-spacing: -3px;
-    line-height: 78px;
+    letter-spacing: -0.15625vw;
+    line-height: 4.0625vw;
     color: lightgray;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 1.45833vw;
     transition: .3s;
     cursor: pointer;
 }
@@ -612,10 +611,10 @@ input[id="radio4"]:checked ~ .slide{
     content: '';
     display: block;
     width: 0;
-    height: 50px;
+    height: 2.60417vw;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0.0vw;
     background: var(--color-green);
     transition: width .3s;
     mix-blend-mode: multiply;
@@ -630,9 +629,9 @@ input[id="radio4"]:checked ~ .slide{
 
 #about .profile .title p {
     font-family: KorFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 400;
-    letter-spacing: -1px;
+    letter-spacing: -0.05208vw;
     line-height: 160%;
     color: var(--color-black);
     text-align: center;
@@ -642,21 +641,21 @@ input[id="radio4"]:checked ~ .slide{
 #about .profile .idcard {
     rotate: -8deg;
 
-    padding: 35px 30px;
+    padding: 1.82292vw 1.5625vw;
     font-family: EngFont;
-    width: 606px;
-    height: 342px;
-    border-radius: 10px;
-    border: 1px solid var(--color-black);
+    width: 31.5625vw;
+    height: 17.8125vw;
+    border-radius: 0.52083vw;
+    border: 0.05208vw solid var(--color-black);
     background-color: var(--color-green);
-    box-shadow: 10px 20px var(--color-black);
+    box-shadow: 0.52083vw 1.04167vw var(--color-black);
 
     transition: .3s;
     cursor: pointer;
 
     position: absolute;
-    left: 200px;
-    top: 650px;
+    left: 10.41667vw;
+    top: 33.85417vw;
 }
 
 /*마우스오버 시 기울기+뎁스 변화*/
@@ -664,58 +663,58 @@ input[id="radio4"]:checked ~ .slide{
     rotate: 0deg;
     scale: 1.05;
     z-index: 50;
-    box-shadow: 20px 35px var(--color-black);
+    box-shadow: 1.04167vw 1.82292vw var(--color-black);
 }
 
 #about .profile .idcard .profimg {
     float: left;
 }
 #about .profile .idcard .profimg img {
-    border: 1px solid var(--color-black);
+    border: 0.05208vw solid var(--color-black);
 }
 #about .profile .idcard .desc {
-    padding-left: 30px;
+    padding-left: 1.5625vw;
     float: left;
 }
 #about .profile .idcard .desc h5 {
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 900;
     line-height: 150%;
-    letter-spacing: -3px;
+    letter-spacing: -0.15625vw;
 }
 #about .profile .idcard .desc .name p {
-    font-size: 20px;
-    letter-spacing: -3px;
+    font-size: 1.04167vw;
+    letter-spacing: -0.15625vw;
 }
 #about .profile .idcard .desc .dash {
     width: 115%;
-    height: 1px;
-    margin: 20px 0;
-    border-bottom: 1px dashed var(--color-black);
+    height: 0.05208vw;
+    margin: 1.04167vw 0;
+    border-bottom: 0.05208vw dashed var(--color-black);
 }
 
 #about .profile .idcard .barcode {
     float: right;
-    margin: 30px 0;
+    margin: 1.5625vw 0;
 }
 
 /*뱃지 스타일 설정*/
 #about .badge {
     position: absolute;
-    bottom: 240px;
-    left: 230px;
+    bottom: 12.5vw;
+    left: 11.97917vw;
 }
 #about .badge .box {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    border: 1px solid var(--color-black);
+    width: 4.16667vw;
+    height: 4.16667vw;
+    border-radius: 0.52083vw;
+    border: 0.05208vw solid var(--color-black);
     background-color: #D9D9D9;
-    box-shadow: 10px 20px var(--color-black);
+    box-shadow: 0.52083vw 1.04167vw var(--color-black);
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    margin-right: 20px;
+    margin-right: 1.04167vw;
 
     transition: .3s;
     cursor: pointer;
@@ -723,47 +722,47 @@ input[id="radio4"]:checked ~ .slide{
     transform-origin: 50% 50%;
 }
 #about .badge .box.ps img {
-    padding-top: 27px;
+    padding-top: 1.40625vw;
 }
 #about .badge .box.ai img {
-    padding-top: 23px;
+    padding-top: 1.19792vw;
 }
 #about .badge .box.fig img,
 #about .badge .box.vs img {
-    padding-top: 15px;
+    padding-top: 0.78125vw;
 }
 #about .badge .box.ps {
     rotate: 6.16deg;
-    margin-top: 50px;
+    margin-top: 2.60417vw;
 }
 #about .badge .box.ai {
     rotate: -1deg;
 }
 #about .badge .box.fig {
     rotate: -5.08deg;
-    margin-top: 50px;
+    margin-top: 2.60417vw;
 }
 #about .badge .box.vs {
     rotate: 1deg;
 }
 /*마우스오버 시 애니메이션*/
 #about .badge .box.ps:hover {
-    transform: translateX(-10px) translateY(20px);
+    transform: translateX(-0.52083vw) translateY(1.04167vw);
     rotate: 0deg;
     z-index: 50;
 }
 #about .badge .box.ai:hover {
-    transform: translateX(0px) translateY(30px);
+    transform: translateX(0.0vw) translateY(1.5625vw);
     rotate: 0deg;
     z-index: 50;
 }
 #about .badge .box.fig:hover {
-    transform: translateX(0px) translateY(20px);
+    transform: translateX(0.0vw) translateY(1.04167vw);
     rotate: 0deg;
     z-index: 50;
 }
 #about .badge .box.vs:hover {
-    transform: translateX(10px) translateY(30px);
+    transform: translateX(0.52083vw) translateY(1.5625vw);
     rotate: 0deg;
     z-index: 50;
 }
@@ -779,7 +778,7 @@ input[id="radio4"]:checked ~ .slide{
     text-align: justify;
     font-family: KorFont;
     background: #fff;
-    border: 1px solid var(--color-black);
+    border: 0.05208vw solid var(--color-black);
     border-radius: .25em;
     bottom: 120%; /*말풍선 표시 위치*/
     color: var(--color-black);
@@ -802,9 +801,9 @@ input[id="radio4"]:checked ~ .slide{
     text-align: center;
     font-family: KorFont;
     background: #fff;
-    border: 1px solid var(--color-black);
+    border: 0.05208vw solid var(--color-black);
     border-radius: .25em;
-    top: -80px; /*말풍선 표시 위치*/
+    top: -4.16667vw; /*말풍선 표시 위치*/
     color: var(--color-black);
     content: attr(data-tip);
     margin-left: -8.75em;
@@ -818,7 +817,7 @@ input[id="radio4"]:checked ~ .slide{
 /*------------------------*/
 
 /*모바일 버전*/
-@media (max-width: 760px) {
+@media (max-width: 39.58333vw) {
     .tool::after { 
         font-size: .75em;
         margin-left: -5em;
@@ -829,85 +828,85 @@ input[id="radio4"]:checked ~ .slide{
 /*이력서 스타일 설정*/
 #about .profile .memo {
     font-family: EngFont;
-    width: 437px;
-    height: 662px;
-    border: 1px solid var(--color-black);
+    width: 22.76042vw;
+    height: 34.47917vw;
+    border: 0.05208vw solid var(--color-black);
     background-color: #fff;
-    box-shadow: 10px 20px var(--color-black);
+    box-shadow: 0.52083vw 1.04167vw var(--color-black);
     overflow: hidden;
 
     transition: .3s;
     cursor: pointer;
 }
 #about .profile .second {
-    height: 700px;
+    height: 36.45833vw;
 }
 #about .profile .memo.first:hover,
 #about .profile .memo.second:hover {
     /*마우스오버 시 기울기+뎁스 변화*/
     rotate: 0deg;
     scale: 1.05;
-    /* box-shadow: 5px 5px; */
+    /* box-shadow: 0.26042vw 0.26042vw; */
     z-index: 50;
-    box-shadow: 20px 40px var(--color-black);
+    box-shadow: 1.04167vw 2.08333vw var(--color-black);
 }
 #about .profile .ico {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 80px;
+    padding-top: 0.52083vw;
+    padding-left: 0.52083vw;
+    padding-bottom: 4.16667vw;
 }
 #about .profile .memo h2 {
     display: inline;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 900;
-    letter-spacing: -3px;
-    margin-left: 10px;
+    letter-spacing: -0.15625vw;
+    margin-left: 0.52083vw;
     position: relative;
 }
 #about .profile .memo h2::after {
     content: '';
     display: block;
     width: 100%;
-    height: 20px;
+    height: 1.04167vw;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0.0vw;
     background: var(--color-green);
     mix-blend-mode: multiply;
 }
 #about .profile h3 {
     font-family: KorFont;
-    font-size: 16px;
+    font-size: 0.83333vw;
     font-weight: 400;
-    margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+    margin-left: 0.52083vw;
+    margin-top: 0.26042vw;
+    margin-bottom: 0.78125vw;
 }
 #about .profile table {
     width: 120%;
-    margin-left: -10px;
-    margin-bottom: 30px;
-    border: 1px solid var(--color-black);
+    margin-left: -0.52083vw;
+    margin-bottom: 1.5625vw;
+    border: 0.05208vw solid var(--color-black);
     border-collapse: collapse;
 }
 #about .profile table .date {
-    width: 120px;
-    font-size: 16px;
-    letter-spacing: -0.5px;
-    padding-left: 20px;
+    width: 6.25vw;
+    font-size: 0.83333vw;
+    letter-spacing: -0.02604vw;
+    padding-left: 1.04167vw;
 }
 #about .profile table .kor {
     font-family: KorFont;
-    font-size: 16px;
-    letter-spacing: -0.5px;
-    padding-left: 10px;
+    font-size: 0.83333vw;
+    letter-spacing: -0.02604vw;
+    padding-left: 0.52083vw;
 }
 #about .profile table .blank {
     color: transparent;
 }
 #about .profile table td {
-    padding: 7px 0px;
-    border: 1px solid var(--color-black);
+    padding: 0.36458vw 0.0vw;
+    border: 0.05208vw solid var(--color-black);
 }
 
 /*마우스오버 형광펜 밑줄 효과*/
@@ -919,10 +918,10 @@ input[id="radio4"]:checked ~ .slide{
     content: '';
     display: block;
     width: 0;
-    height: 10px;
+    height: 0.52083vw;
     position: absolute;
     left: 0;
-    bottom: 0px;
+    bottom: 0.0vw;
     background: var(--color-green);
     transition: width .3s;
     mix-blend-mode: multiply;
@@ -937,74 +936,74 @@ input[id="radio4"]:checked ~ .slide{
     rotate: 4.88deg;
 
     position: absolute;
-    left: 767px;
-    top: 530px;
+    left: 39.94792vw;
+    top: 27.60417vw;
 }
 #about .profile .memo.second {
     rotate: -7deg;
 
     position: absolute;
-    right: 225px;
-    top: 600px;
+    right: 11.71875vw;
+    top: 31.25vw;
 }
 #about .profile .dummy1 {
     position: absolute;
     rotate: -3.75deg;
-    left: 1190px;
-    top: 680px;
+    left: 61.97917vw;
+    top: 35.41667vw;
 }
 #about .profile .dummy2 {
     position: absolute;
     rotate: -5.02deg;
-    left: 1220px;
-    top: 640px;
+    left: 63.54167vw;
+    top: 33.33333vw;
 }
 
 
 /* :::::: works 항목 스타일 :::::: */
 #works {
-    width: 1920px;
-    height: 1000px;
+    width: 100.0vw;
+    height: 52.08333vw;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 4.16667vw;
 }
 #works .content_wrap .title {
-    margin-left: 140px;
-    margin-bottom: 50px;
+    margin-left: 7.29167vw;
+    margin-bottom: 2.60417vw;
 }
 #works .content_wrap .title h2 {
     font-family: EngFont;
-    font-size: 80px;
+    font-size: 4.16667vw;
     font-weight: 900;
-    letter-spacing: -10px;
+    letter-spacing: -0.52083vw;
     color: var(--color-black);
-    margin-bottom: -5px;
+    margin-bottom: -0.26042vw;
 }
 #works .content_wrap .title p {
     font-family: KorFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 400;
-    letter-spacing: -1px;
+    letter-spacing: -0.05208vw;
     color: gray;
-    margin-left: 10px;
+    margin-left: 0.52083vw;
 }
 
 /*버튼 스타일 설정*/
 #works .content_wrap .works_wrap .buttons {
-    margin-left: 140px;
+    margin-left: 7.29167vw;
     display: flex;
     flex-direction: column;
     float: left;
 }
 #works .content_wrap .works_wrap .buttons button {
-    width: 236px;
-    height: 39px;
-    border: 1px solid var(--color-drakgray);
-    border-radius: 82px;
+    width: 12.29167vw;
+    height: 2.03125vw;
+    border: 0.05208vw solid var(--color-drakgray);
+    border-radius: 4.27083vw;
     background-color: #fff;
     color: var(--color-black);
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.52083vw;
     overflow: hidden;
 
     cursor: pointer;
@@ -1021,17 +1020,17 @@ input[id="radio4"]:checked ~ .slide{
 /*버튼 기본 스타일 설정*/
 #works .content_wrap .works_wrap .buttons button {
     font-family: EngFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 900;
-    letter-spacing: -3px;
-    line-height: 39px;
+    letter-spacing: -0.15625vw;
+    line-height: 2.03125vw;
 }
 
 /*프로젝트 항목 스타일 설정*/
 #works .content_wrap .works_wrap .cards {
-    width: 1283px;
-    height: 600px;
-    margin-left: 406px;
+    width: 66.82292vw;
+    height: 31.25vw;
+    margin-left: 21.14583vw;
 }
 
 /*프로젝트 큰 덩어리*/
@@ -1049,17 +1048,17 @@ input[id="radio4"]:checked ~ .slide{
 }
 /*프로젝트 작은 덩어리*/
 #works .content_wrap .works_wrap .cards .project .inner_card {
-    margin-left: 15px;
+    margin-left: 0.78125vw;
 
     background-color: lightgray;
-    padding: 20px 20px;
+    padding: 1.04167vw 1.04167vw;
 
-    height: 600px;
-    min-width: 200px;
+    height: 31.25vw;
+    min-width: 10.41667vw;
     width: calc(100%/2);
 
-    border: 1px solid var(--color-drakgray);
-    border-radius: 15px;
+    border: 0.05208vw solid var(--color-drakgray);
+    border-radius: 0.78125vw;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -1074,22 +1073,22 @@ input[id="radio4"]:checked ~ .slide{
 
 #works .content_wrap .works_wrap .cards .project .project_description h3 {
     font-family: EngFont;
-    font-size: 20px;
-    letter-spacing: -3px;
-    margin-bottom: 20px;
+    font-size: 1.04167vw;
+    letter-spacing: -0.15625vw;
+    margin-bottom: 1.04167vw;
 }
 #works .content_wrap .works_wrap .cards .project .project_description h2 {
     font-family: KorFont;
-    font-size: 28px;
+    font-size: 1.45833vw;
     font-weight: 600;
-    margin-bottom: 1.5px;
+    margin-bottom: 0.07812vw;
 }
 #works .content_wrap .works_wrap .cards .project .project_description p {
     font-family: KorFont;
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 300;
     display: inline-block;
-    width: 180px;
+    width: 9.375vw;
 }
 
 /*----------배경 이미지----------*/
@@ -1170,6 +1169,11 @@ input[id="radio4"]:checked ~ .slide{
 .graphic .inner_card:nth-child(4) {
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
+    url(images/graphics_4.png);
+}
+.graphic .inner_card:nth-child(5) {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
     url(images/graphics_5.png);
 }
 /*--------------------*/
@@ -1177,7 +1181,7 @@ input[id="radio4"]:checked ~ .slide{
 /*애니메이션 효과*/
 #works .content_wrap .works_wrap .cards .project.anim-out {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(20.83333vw);
 }
 #works .content_wrap .works_wrap .cards .project.invisible {
     display: none;
@@ -1186,10 +1190,10 @@ input[id="radio4"]:checked ~ .slide{
 /* :::::: 컨택트 섹션 스타일 :::::: */
 #contact {
     clear: both;
-    width: 1900px;
+    width: 98.95833vw;
     margin: 0 auto;
-    height: 890px;
-    padding-top: 100px;
+    height: 46.35417vw;
+    padding-top: 5.20833vw;
 }
 #contact .content_wrap {
     position: relative;
@@ -1198,11 +1202,11 @@ input[id="radio4"]:checked ~ .slide{
 
 #contact .content_wrap .title h2 {
     font-family: EngFont;
-    font-size: 80px;
+    font-size: 4.16667vw;
     font-weight: 900;
-    letter-spacing: -10px;
+    letter-spacing: -0.52083vw;
     color: var(--color-black);
-    margin-bottom: 40px;
+    margin-bottom: 2.08333vw;
     text-align: center;
 }
 #contact .content_wrap .mail {
@@ -1212,53 +1216,53 @@ input[id="radio4"]:checked ~ .slide{
     transition: .3s;
     cursor: pointer;
 
-    width: 803px;
-    height: 475px;
-    border-radius: 10px;
-    border: 1px solid var(--color-black);
+    width: 41.82292vw;
+    height: 24.73958vw;
+    border-radius: 0.52083vw;
+    border: 0.05208vw solid var(--color-black);
     background-color: #fff;
-    box-shadow: 15px 30px var(--color-black);
+    box-shadow: 0.78125vw 1.5625vw var(--color-black);
     margin: auto;
-    padding: 50px 30px;
+    padding: 2.60417vw 1.5625vw;
 }
 #contact .content_wrap .mail:hover {
-    transform: translateX(20px) translateY(30px);
-    box-shadow: 2px 2px var(--color-black);
+    transform: translateX(1.04167vw) translateY(1.5625vw);
+    box-shadow: 0.10417vw 0.10417vw var(--color-black);
     /* z-index: 0; */
 }
 #contact .content_wrap .mail h3 {
     font-family: EngFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 400;
-    letter-spacing: -3px;
+    letter-spacing: -0.15625vw;
     color: var(--color-black);
 }
 #contact .content_wrap .mail hr {
-    border: 1px dashed var(--color-drakgray);
-    margin: 15px 0px;
+    border: 0.05208vw dashed var(--color-drakgray);
+    margin: 0.78125vw 0.0vw;
 }
 #contact .content_wrap .mail p {
     font-family: KorFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 350;
     color: gray;
 }
 #contact .content_wrap .mail .send {
     position: absolute;
-    bottom: 35px;
-    right: 32px;
+    bottom: 1.82292vw;
+    right: 1.66667vw;
 }
 #contact .content_wrap .mail .send button {
-    width: 239px;
-    height: 52px;
-    border: 1px solid var(--color-black);
-    border-radius: 82px;
+    width: 12.44792vw;
+    height: 2.70833vw;
+    border: 0.05208vw solid var(--color-black);
+    border-radius: 4.27083vw;
     background-color: #fff;
 
     font-family: EngFont;
-    font-size: 24px;
+    font-size: 1.25vw;
     font-weight: 900;
-    line-height: 52px;
+    line-height: 2.70833vw;
 
     transition: .3s;
     cursor: pointer;
@@ -1271,8 +1275,8 @@ input[id="radio4"]:checked ~ .slide{
 
 #contact .content_wrap .battery1 {
     position: absolute;
-    top: -140px;
-    left: 340px;
+    top: -7.29167vw;
+    left: 17.70833vw;
 
     transition: .3s;
     cursor: pointer;
@@ -1283,8 +1287,8 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .battery2 {
     position: absolute;
-    top: 0px;
-    left: 350px;
+    top: 0.0vw;
+    left: 18.22917vw;
 
     transition: .3s;
     cursor: pointer;
@@ -1294,8 +1298,8 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .lightbulb {
     position: absolute;
-    bottom: -150px;
-    left: 210px;
+    bottom: -7.8125vw;
+    left: 10.9375vw;
 
     transition: .3s;
     cursor: pointer;
@@ -1305,8 +1309,8 @@ input[id="radio4"]:checked ~ .slide{
 }
 #contact .content_wrap .smartphone {
     position: absolute;
-    top: -100px;
-    right: 200px;
+    top: -5.20833vw;
+    right: 10.41667vw;
 
     transition: .3s;
     cursor: pointer;
@@ -1318,121 +1322,47 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 푸터 :::::: */
 #footer {
-    width: 100%;
-    height: 212px;
+    width: 100.0vw;;
+    height: 11.04167vw;
     background-color: var(--color-black);
-    padding-left: 140px;
-    padding-top: 60px;
+    padding-left: 7.29167vw;
+    padding-top: 3.125vw;
 }
 #footer .txt_wrap p, #footer .txt_wrap ul li {
     font-family: KorFont;
-    font-size: 15px;
+    font-size: 0.78125vw;
     font-weight: 300;
     color: gray;
-    margin-bottom: 10px;
+    margin-bottom: 0.52083vw;
 }
 #footer .txt_wrap ul li span {
-    margin-right: 20px;
+    margin-right: 1.04167vw;
 }
 
-/* :::::: ScrollTrigger에 사용되는 CSS :::::: */
+/* :::::: ScrollTrigger에 사용되는 CS ::::::S */
 .magic-slide {opacity: 0; transition: 1s;}
-.magic-slide.to-down {transform: translateY(-150px);}
-.magic-slide.to-up {transform: translateY(150px);}
-.magic-slide.to-right {transform: translateX(-150px);}
+.magic-slide.to-down {transform: translateY(-7.8125vw);}
+.magic-slide.to-up {transform: translateY(7.8125vw);}
+.magic-slide.to-right {transform: translateX(-7.8125vw);}
 .show .magic-slide {opacity: 1; transform: translateY(0);}
 .show .magic-slide.delay-0 {transition-delay: 0s;}
 .show .magic-slide.delay-1 {transition-delay:0.6s;}
 .show .magic-slide.delay-2 {transition-delay:1.2s;}
 .show .magic-slide.delay-3 {transition-delay:1.8s;}
 .show .magic-slide.delay-4 {transition-delay:2.4s;}
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .tabs {
+        width: 90%;
+        transform: scale(0.8);
+    }
 
-/* :::::: 반응형 웹 :::::: */
-@media (min-width: 2000px) {
-    #main {margin-top: 7.81vw;}
-    
-    /*::::무한 스크롤링 배너::::*/
-    #banner {
-        /* border: 1px solid red; */
-        height: 21vw;
+    #main .title {
+        padding-left: 4vw;
+        padding-top: 8vw;
     }
-    #banner .wrap-box {
-        padding: 10px 0;
-        transform: translateX(-160px) translateY(8.5vw) rotate(-8deg);
-    }
-    #banner .wrap-box .rolling-list .list {
-        font-size: 2.5vw;  /* 48px */}
-    #banner2 {
-        /* border: 1px solid red; */
-        height: 21vw;
-    }
-    #banner2 .wrap-box-2 {
-        padding: 10px 0;
-        transform: translateX(-160px) translateY(10vw) rotate(8deg);
-    }
-    #banner2 .wrap-box-2 .rolling-list-2 .list {
-        font-size: 2.5vw;  /* 48px */}
 
-    /*::::works::::*/
-    #works {
-        width: 100%;
-        height: 111.11vh;  /* 1000px */
-        padding-top: 4.17vw;  /* 80px */
-    }
-    #works .content_wrap .title {
-        margin-left: 7.29vw;  /* 140px */
-        margin-bottom: 2.60vw;  /* 50px */
-
-    }
-    #works .content_wrap .title h2 {
-        font-size: 4.17vw;  /* 80px */
-        letter-spacing: -0.52vw;  /* -10px */
-        margin-bottom: -0.26vw;  /* -5px */
-    }
-    #works .content_wrap .title p {
-        font-size: 1.25vw;  /* 24px */
-        letter-spacing: -0.05vw;  /* -1px */
-        margin-left: 0.52vw;  /* 10px */
-    }
-    #works .content_wrap .works_wrap .cards {
-        width: 66.84vw;  /* 1283px */
-        height: 66.67vh;  /* 600px */
-        margin-left: 21.17vw;  /* 406px */
-    }
-    #works .content_wrap .works_wrap .cards .project .inner_card {
-        margin-left: 0.78vw;  /* 15px */
-        padding: 1.04vw 1.04vw;  /* 20px 20px */
-        height: 66.67vh;  /* 600px */
-        min-width: 10.42vw;  /* 200px */
-        border-radius: 0.78vw;  /* 15px */
-    }
-    #works .content_wrap .works_wrap .cards .project .project_description h3 {
-        font-size: 1.04vw;  /* 20px */
-        letter-spacing: -0.16vw;  /* -3px */
-        margin-bottom: 1.04vw;  /* 20px */
-    }
-    #works .content_wrap .works_wrap .cards .project .project_description h2 {
-        font-size: 1.46vw;  /* 28px */
-        margin-bottom: 0.08vw;  /* 1.5px */
-    }
-    #works .content_wrap .works_wrap .cards .project .project_description p {
-        font-size: 0.94vw;  /* 15px */
-        width: 9.38vw;  /* 180px */
-    }
-    /*버튼 스타일 설정*/
-    #works .content_wrap .works_wrap .buttons {
-        margin-left: 7.29vw;  /* 140px */
-    }
-    #works .content_wrap .works_wrap .buttons button {
-        width: 12.29vw;  /* 236px */
-        height: 2.04vw;  /* 39px */
-        border-radius: 4.27vw;  /* 82px */
-        margin-bottom: 0.52vw;  /* 10px */
-    }
-    /*버튼 기본 스타일 설정*/
-    #works .content_wrap .works_wrap .buttons button {
-        font-size: 1.25vw;  /* 24px */
-        letter-spacing: -0.16vw;  /* -3px */
-        line-height: 2.04vw;  /* 39px */
+    #main .title h3 {
+        font-size: 3vw;
     }
 }
