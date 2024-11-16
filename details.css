@@ -161,6 +161,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 .title h1 {
     font-size: 64px;
+    font-weight: 900;
     letter-spacing: -2px;
 }
 .title .subtitle {
@@ -169,14 +170,14 @@ input[id="radio4"]:checked ~ .slide{
 .title .subtitle h3 {
     float: left;
     font-family: KorFont;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 30px;
+    font-weight: 200;
     letter-spacing: -1.5px;
 }
 .title .subtitle .hr {
     float: left;
-    height: 32px;
-    width: 300px;
+    height: 25px;
+    width: 250px;
     margin: 0px 10px;
     border-bottom: 1px solid var(--color-black);
 }
@@ -184,9 +185,9 @@ input[id="radio4"]:checked ~ .slide{
 /* :::::: 인트로 :::::: */
 #intro {
     width: 100%;
-    height: 1500px;
 
     padding-top: 220px;
+    padding-bottom: 250px;
 
     text-align: center;
     align-items: center;
@@ -227,14 +228,39 @@ input[id="radio4"]:checked ~ .slide{
 
     overflow: hidden;
 }
-#intro .phone img {
+#intro .poster {
+    margin: auto;
+    margin-top: 100px;
+    
+    width: 541px;
+    height: 800px;
+    background-color: lightgray;
+    border: 1px solid var(--color-black);
+
+    overflow: hidden;
+}
+#intro .kit {
+    margin: auto;
+    margin-top: 100px;
+    
+    width: 1000px;
+    height: 840px;
+    border-radius: 20px;
+    background-color: lightgray;
+    border: 1px solid var(--color-black);
+
+    overflow: hidden;
+}
+#intro .phone img, #intro .poster img, #intro .kit img {
     width: 100%;
     height: 100%;
 }
 
-/* :::::: 본문 :::::: */
+/* :::::: 본문1 :::::: */
 #article {
+    clear: both;
     width: 1467px;
+    height: 100%;
     margin: auto;
     margin-bottom: 170px;
 }
@@ -244,6 +270,7 @@ input[id="radio4"]:checked ~ .slide{
 }
 #article .text h3 {
     font-size: 48px;
+    font-weight: 900;
 }
 #article .text p {
     font-size: 24px;
@@ -257,8 +284,65 @@ input[id="radio4"]:checked ~ .slide{
     margin-bottom: 40px;
     border: 1px solid var(--color-black);
 }
+#article .img-nolimit {
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--color-black);
+}
+#article .img-vertical {
+    float: left;
+    width: 45%;
+    height: 970px;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--color-black);
+}
 
-#article .img img {
+#article .img img,
+#article .img-nolimit img,
+#article .img-vertical img {
+    width: 100%;
+}
+
+/* :::::: 본문2 :::::: */
+#article2 {
+    clear: both;
+    width: 1467px;
+    margin: auto;
+    margin-bottom: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+#article2 .text {
+    width: 50%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+#article2 .text h3 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+#article2 .text p {
+    font-size: 24px;
+    text-align: justify;
+}
+#article2 .img-vertical {
+    width: 45%;
+    height: 970px;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--color-black);
+}
+
+#article2 .img-vertical img {
     width: 100%;
 }
 

@@ -1165,12 +1165,12 @@ input[id="radio4"]:checked ~ .slide{
 .graphic .inner_card:nth-child(3) {
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
-    url(images/graphics_3.png);
+    url(images/graphics_5.png);
 }
 .graphic .inner_card:nth-child(4) {
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)),
-    url(images/graphics_5.png);
+    url(images/graphics_3.png);
 }
 /*--------------------*/
 
