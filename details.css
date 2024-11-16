@@ -151,8 +151,48 @@ input[id="radio4"]:checked ~ .slide{
     overflow: hidden;
 }
 #main .main_bg img {
+    transition: .3s;
     width: 100%;
 }
+#main .weblink:hover {
+    cursor: pointer;
+}
+#main .weblink:hover img {
+    scale: 1.05;
+}
+#main .weblink {
+    position: relative;
+}
+
+/*웹사이트 포폴용 썸네일 오버레이 설정*/
+#main .weblink .overlay {
+    opacity: 0;
+
+    transition: .3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+}
+#main .weblink .overlay:hover {
+    opacity: 1;
+}
+#main .weblink .overlay p {
+    font-size: 20px;
+    font-weight: 300;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10PX 20PX;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 
 .title {
     margin-top: 20px;
