@@ -291,9 +291,59 @@ input[id="radio4"]:checked ~ .slide{
 
     overflow: hidden;
 }
-#intro .phone img, #intro .poster img, #intro .kit img {
+#intro .before-after {
+    margin: auto;
+    margin-top: 100px;
+    
+    position: relative;
+    width: 1000px;
+    height: 475px;
+    border-radius: 20px;
+    background-color: lightgray;
+    border: 1px solid var(--color-black);
+
+    overflow: hidden;
+    cursor: pointer;
+}
+#intro .before-after .before {
     width: 100%;
     height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+#intro .before-after .after {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    transition: .8s;
+    overflow: hidden;
+
+}
+#intro .before-after:hover .after {
+    width: 0px;
+}
+#intro .phone img,
+#intro .poster img,
+#intro .kit img {
+    width: 100%;
+    height: 100%;
+}
+#intro .before-after .before img,
+#intro .before-after .after img {
+    width: 1000px;
+    height: 475px;
+}
+#intro .status {
+    opacity: 50%;
+    margin-top: 20px;
+    color: var(--color-drakgray);
 }
 
 /* :::::: 본문1 :::::: */
@@ -318,7 +368,6 @@ input[id="radio4"]:checked ~ .slide{
 #article .img {
     width: 100%;
     height: 800px;
-    background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -326,17 +375,17 @@ input[id="radio4"]:checked ~ .slide{
 }
 #article .img-nolimit {
     width: 100%;
-    background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
     border: 1px solid var(--color-black);
 }
+#article .img-nolimit img {
+    width: 100%;
+}
 #article .img-vertical {
     float: left;
     width: 45%;
-    height: 970px;
-    background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -374,7 +423,6 @@ input[id="radio4"]:checked ~ .slide{
 }
 #article2 .img-vertical {
     width: 45%;
-    height: 970px;
     background-color: lightgray;
     border-radius: 10px;
     overflow: hidden;
@@ -384,6 +432,7 @@ input[id="radio4"]:checked ~ .slide{
 
 #article2 .img-vertical img {
     width: 100%;
+    height: 100%;
 }
 
 /* :::::: ScrollTrigger에 사용되는 CS ::::::S */
