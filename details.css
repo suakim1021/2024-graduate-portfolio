@@ -138,6 +138,38 @@ input[id="radio4"]:checked ~ .slide{
     border-right: 1px solid var(--color-black);
 }
 
+/* 백투탑 플로팅 버튼 */
+.arrow-up {
+    cursor: pointer;
+    position: fixed;
+    bottom: 90px;
+    right: 70px;
+    width: 80px;
+    height: 80px;
+    color: var(--color-black);
+    background-color: lightgray;
+    border: 1px solid var(--color-black);
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s;
+    transition: 0.3s;
+    background-image: url(images/arrow_up.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    z-index: 11;
+}
+
+.arrow-up:hover {
+    transform: scale(0.98);
+    background-color: var(--color-green);
+}
+
+.arrow-up.show {
+    opacity: 1;
+}
+
 /* :::::: 메인화면 :::::: */
 #main {
     width: 100%;
@@ -153,6 +185,7 @@ input[id="radio4"]:checked ~ .slide{
 #main .main_bg img {
     transition: .3s;
     width: 100%;
+    height: 100%;
 }
 #main .weblink:hover {
     cursor: pointer;

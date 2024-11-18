@@ -21,9 +21,13 @@
             </div>
         </div>
 
+        <!-- 프로그래스 바 -->
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
         </div>
+
+        <!-- 백투탑 플로팅 버튼 -->
+        <button class="arrow-up"></button>
         
         <section id="main" class="scroll-spy">
             <div class="main_bg weblink magic-slide to-down delay-0">
@@ -199,6 +203,22 @@
 
         progressBar.style.width = scrolled + "%";
         });
+
+        // 카테고리 버튼 누르면 각 페이지로 스크롤 이동
+        const sectionHome = document.querySelector('#main');
+
+        // 탑 페이지로 돌아가는 버튼 표시
+        const arrowUp = document.querySelector('.arrow-up')
+        document.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                arrowUp.classList.add('show');
+            } else {
+                arrowUp.classList.remove('show');
+            }
+        })
+        arrowUp.addEventListener('click', function() {
+            sectionHome.scrollIntoView({behavior:"smooth", block:'center'})
+        })
     </script>
 </body>
 </html>
