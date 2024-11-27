@@ -259,6 +259,7 @@ input[id="radio4"]:checked ~ .slide{
     top: 150px;
 }
 
+
 /*마우스오버 형광펜 밑줄 효과*/
 #main .title span {
     position: relative;
@@ -287,13 +288,13 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 세가지소개 스타일 설정 :::::: */
 #intro {
-    width: 1920px;
+    width: 100%;
     margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 296px;
 }
 #intro .content_wrap {
-    padding: 0px 293px;
+    padding: 0px 14vw;
 }
 #intro .content_wrap ul {
     display: flex;
@@ -1345,6 +1346,231 @@ input[id="radio4"]:checked ~ .slide{
 
 /* :::::: 반응형 웹 :::::: */
 @media (min-width: 2000px) {
+    #main {margin-top: 7.81vw;}
+    
+    /*::::무한 스크롤링 배너::::*/
+    #banner {
+        /* border: 1px solid red; */
+        height: 21vw;
+    }
+    #banner .wrap-box {
+        padding: 10px 0;
+        transform: translateX(-160px) translateY(8.5vw) rotate(-8deg);
+    }
+    #banner .wrap-box .rolling-list .list {
+        font-size: 2.5vw;  /* 48px */}
+    #banner2 {
+        /* border: 1px solid red; */
+        height: 21vw;
+    }
+    #banner2 .wrap-box-2 {
+        padding: 10px 0;
+        transform: translateX(-160px) translateY(10vw) rotate(8deg);
+    }
+    #banner2 .wrap-box-2 .rolling-list-2 .list {
+        font-size: 2.5vw;  /* 48px */}
+
+    /*::::works::::*/
+    #works {
+        width: 100%;
+        height: 111.11vh;  /* 1000px */
+        padding-top: 4.17vw;  /* 80px */
+    }
+    #works .content_wrap .title {
+        margin-left: 7.29vw;  /* 140px */
+        margin-bottom: 2.60vw;  /* 50px */
+
+    }
+    #works .content_wrap .title h2 {
+        font-size: 4.17vw;  /* 80px */
+        letter-spacing: -0.52vw;  /* -10px */
+        margin-bottom: -0.26vw;  /* -5px */
+    }
+    #works .content_wrap .title p {
+        font-size: 1.25vw;  /* 24px */
+        letter-spacing: -0.05vw;  /* -1px */
+        margin-left: 0.52vw;  /* 10px */
+    }
+    #works .content_wrap .works_wrap .cards {
+        width: 66.84vw;  /* 1283px */
+        height: 66.67vh;  /* 600px */
+        margin-left: 21.17vw;  /* 406px */
+    }
+    #works .content_wrap .works_wrap .cards .project .inner_card {
+        margin-left: 0.78vw;  /* 15px */
+        padding: 1.04vw 1.04vw;  /* 20px 20px */
+        height: 66.67vh;  /* 600px */
+        min-width: 10.42vw;  /* 200px */
+        border-radius: 0.78vw;  /* 15px */
+    }
+    #works .content_wrap .works_wrap .cards .project .project_description h3 {
+        font-size: 1.04vw;  /* 20px */
+        letter-spacing: -0.16vw;  /* -3px */
+        margin-bottom: 1.04vw;  /* 20px */
+    }
+    #works .content_wrap .works_wrap .cards .project .project_description h2 {
+        font-size: 1.46vw;  /* 28px */
+        margin-bottom: 0.08vw;  /* 1.5px */
+    }
+    #works .content_wrap .works_wrap .cards .project .project_description p {
+        font-size: 0.94vw;  /* 15px */
+        width: 9.38vw;  /* 180px */
+    }
+    /*버튼 스타일 설정*/
+    #works .content_wrap .works_wrap .buttons {
+        margin-left: 7.29vw;  /* 140px */
+    }
+    #works .content_wrap .works_wrap .buttons button {
+        width: 12.29vw;  /* 236px */
+        height: 2.04vw;  /* 39px */
+        border-radius: 4.27vw;  /* 82px */
+        margin-bottom: 0.52vw;  /* 10px */
+    }
+    /*버튼 기본 스타일 설정*/
+    #works .content_wrap .works_wrap .buttons button {
+        font-size: 1.25vw;  /* 24px */
+        letter-spacing: -0.16vw;  /* -3px */
+        line-height: 2.04vw;  /* 39px */
+    }
+}
+
+/*:::::::::::::::반응형 웹-모바일:::::::::::::::*/
+@media (max-width:1000px){
+    #main {
+        position: relative;
+        width: 100%;
+        height: 1000px;
+
+        border: 1px solid red;
+
+        margin: 0 auto;
+        overflow: hidden;
+        display: block;
+    }
+    
+    #main .hero_pipe_1 {
+        display: none;
+    }
+    #main .title {
+        padding-left: 40px;
+        padding-top: 130px;
+    }
+    #main .title h3 {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    #main .title h1 {
+        font-size: 55px;
+        margin-left: -10px;
+        line-height: 70px;
+    }
+    
+    #main .object_wrap {
+        scale: .7;
+        position: absolute;
+        top: 250px;
+        right: -300px;
+    }
+
+    /*메인 오브젝트 위치*/
+    #main .object {
+        position: relative;
+        padding-top: 0px;
+    }
+    /*마우스오버 형광펜 밑줄 효과*/
+    #main .title h1 span::after {
+        height: 55px;
+    }
+    /*--------------------------*/
+
+    #main .object .hero_pipe_2 {
+        display: none;
+    }
+    
+    /* :::::: 세가지소개 스타일 설정 :::::: */
+    .notice {display: none;}
+    #intro {
+        width: auto;
+        margin: 0 auto;
+        padding-top: 200px;
+        padding-bottom: 0px;
+    }
+    #intro .content_wrap {
+        padding: 0px 0px;
+        width: 355px;
+        margin: auto;
+    }
+    #intro .content_wrap ul {flex-direction: column;}
+    #intro .content_wrap ul li {
+        width: 370px;
+        color: var(--color-black);
+        cursor: pointer;
+        margin-bottom: 180px;
+    }
+    #intro .content_wrap ul li .object {
+        position: relative;
+        width: auto;
+        height: 270px;
+        margin-bottom: 60px;
+        padding-left: 70px;
+    }
+
+    /*이미지 기본 위치 설정*/
+    #intro .content_wrap ul li .object img {
+        position: absolute;
+        bottom: 0;
+    }
+
+    /*전구 이미지 조립*/
+    #intro .content_wrap ul li .object.bulb img:nth-child(2) {
+        position: absolute;
+        bottom: 125px;
+        left: 95px;
+
+        animation: ani_bulb 1.5s infinite alternate;
+    }
+    /*마우스오버시 애니메이션 일시정지*/
+    /* #intro .content_wrap ul li:hover .object.bulb img:nth-child(2),
+    #intro .content_wrap ul li:hover .object.battery .group,
+    #intro .content_wrap ul li:hover .object.battery .group img:nth-child(1),
+    #intro .content_wrap ul li:hover .object.battery .group img:nth-child(2),
+    #intro .content_wrap ul li:hover .object.battery .group img:nth-child(3),
+    #intro .content_wrap ul li:hover .object.phone img:nth-child(2),
+    #intro .content_wrap ul li:hover .object.phone img:nth-child(3),
+    #intro .content_wrap ul li:hover .object.phone img:nth-child(4) {
+        animation-play-state: paused;
+    } */
+
+    /*배터리 이미지 조립*/
+    #intro .content_wrap ul li .object.battery .group {
+        animation: ani_battery 2s infinite alternate;
+    }
+    #intro .content_wrap ul li .object.battery .group img:nth-child(1) {
+        position: absolute;
+        bottom: 175px;
+        left: 65px;
+        z-index: 4;
+
+        animation: ani_battery1 2s infinite alternate;
+    }
+    #intro .content_wrap ul li .object.battery .group img:nth-child(2) {
+        position: absolute;
+        bottom: 190px;
+        left: 95px;
+        z-index: 3;
+
+        animation: ani_battery2 2s infinite alternate;
+    }
+    #intro .content_wrap ul li .object.battery .group img:nth-child(3) {
+        position: absolute;
+        bottom: 180px;
+        left: 95px;
+        z-index: 2;
+
+        animation: ani_battery3 2s infinite alternate;
+    }
+}
+@media (min-width: 1000px) {
     #main {margin-top: 7.81vw;}
     
     /*::::무한 스크롤링 배너::::*/
